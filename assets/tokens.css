@@ -1,0 +1,72 @@
+/* Hallmark · tokens · theme: studied-DNA (source: saatchiart.com) + бренд KALINA ART
+ * Бренд неприкосновенен: белый фон, красный логотип #CE1417, PT Root (шрифт её сайта).
+ * С референса: гротеск на всё + антиква-акцент (имена художников курсивом, слова в заголовке первого экрана),
+ * капс с разрядкой в заголовках секций, серая подложка под работой, нулевые радиусы, волосяные рамки.
+ */
+:root {
+  /* цвет */
+  --color-paper: oklch(100% 0 0);              /* белый фон бренда */
+  --color-paper-warm: oklch(96.7% 0.007 88.6); /* полосы секций — тёплая бумага, как у референса, но без зелени */
+  --color-surface: oklch(95.8% 0 0);           /* подложка под работой, #F1F1F1 */
+  --color-ink: oklch(24.4% 0.006 0.6);         /* #231F20 — тёплый почти-чёрный */
+  --color-ink-2: oklch(32.1% 0 0);             /* #333 */
+  --color-muted: oklch(52.8% 0 0);             /* #6B6B6B — 4.7–5.3:1 на всех светлых фонах */
+  --color-line: oklch(88.8% 0 0);              /* #DADADA */
+  --color-brand: oklch(54.1% 0.213 27.9);      /* #CE1417 — красный логотипа */
+  --color-brand-bright: oklch(63.3% 0.253 28.6); /* #FF1515 — красный заголовка на ч/б фото с её сайта */
+  --color-on-dark: oklch(100% 0 0);
+  --color-on-dark-muted: oklch(84% 0 0);
+  --color-scrim: oklch(0% 0 0 / 0.58);         /* подложка окна заявки */
+  --color-scrim-strong: oklch(0% 0 0 / 0.66);  /* затемнение фото под текстом */
+  --color-scrim-mid: oklch(0% 0 0 / 0.4);
+  --color-scrim-clear: oklch(0% 0 0 / 0);
+  --shadow-pop: 0 12px 32px oklch(0% 0 0 / 0.08); /* выпадающие панели */
+  --shadow-work: drop-shadow(0 1px 1px oklch(0% 0 0 / 0.14)) drop-shadow(0 6px 12px oklch(0% 0 0 / 0.12)); /* холст на подложке: тень по краю картины, не по рамке img */
+  --mat-pad: 6%;                                 /* поле подложки вокруг работы, как у референса */
+  --color-focus: var(--color-brand);
+  --color-note: oklch(95.4% 0.07 96);          /* пометки прототипа */
+  --color-note-line: oklch(76% 0.15 90);
+  --color-error: oklch(50% 0.19 27);
+
+  /* шрифты */
+  --font-sans: "PT Root UI", "PT Root", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Spectral", Georgia, "Times New Roman", serif;
+
+  /* размеры текста */
+  --text-xs: 0.8125rem;   /* 13 */
+  --text-sm: 0.875rem;    /* 14 */
+  --text-base: 1rem;      /* 16 */
+  --text-md: 1.125rem;    /* 18 */
+  --text-lg: 1.375rem;    /* 22 */
+  --text-xl: 1.75rem;     /* 28 — заголовки секций, как у референса */
+  --text-2xl: clamp(1.75rem, 1.2vw + 1.3rem, 2.5rem);
+  --text-display: clamp(2.25rem, 3.6vw + 1rem, 4rem);
+  --tracking-caps: 0.02em;
+  --tracking-label: 0.06em;
+
+  /* отступы, шаг 4 px */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 5rem;
+  --gutter: clamp(1rem, 4vw, 3.5rem);
+  --page-max: 90rem;
+
+  /* форма */
+  --radius: 0;
+  --radius-round: 999px;
+  --rule: 1px solid var(--color-line);
+  --rule-ink: 1px solid var(--color-ink);
+
+  /* движение */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-base: 220ms;
+}

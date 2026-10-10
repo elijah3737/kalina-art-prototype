@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>KALINA ART — дизайны главной</title>
+<style>
+  /* Служебная страница прототипа: дизайн во весь экран, выбор — маленький квадрат в левом верхнем углу. Не часть сайта. */
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; overflow: hidden; }
+  body { background: #e6e6e6; font: 500 14px/1.3 "PT Root UI", Helvetica, Arial, sans-serif; color: #231f20; }
+  .stage { position: absolute; inset: 0; display: flex; justify-content: center; }
+  .stage.is-phone { padding: 16px 0; }
+  iframe { width: 100%; height: 100%; border: 0; background: #fff; }
+  .stage.is-phone iframe { width: 390px; max-width: 100%; box-shadow: 0 0 0 1px #c9c9c9; }
+  .pick { position: fixed; top: 6px; left: 6px; z-index: 10; }
+  .pick__btn { display: grid; place-items: center; width: 22px; height: 22px; padding: 0; border: 1px solid rgba(35, 31, 32, .25); background: rgba(255, 255, 255, .7); color: #231f20; font: 700 11px/1 inherit; font-family: inherit; cursor: pointer; opacity: .45; transition: opacity .15s; }
+  .pick__btn:hover, .pick__btn:focus-visible, .pick.is-open .pick__btn { opacity: 1; }
+  .pick__menu { display: none; margin-top: 4px; min-width: 150px; padding: 4px 0; background: #fff; border: 1px solid #d9d9d9; }
+  .pick.is-open .pick__menu { display: block; }
+  .pick__menu button { display: block; width: 100%; padding: 7px 12px; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
+  .pick__menu button:hover { color: #ce1417; }
+  .pick__menu button[aria-pressed="true"] { color: #ce1417; font-weight: 700; }
+  .pick__menu hr { margin: 4px 0; border: 0; border-top: 1px solid #e6e6e6; }
+</style>
+</head>
+<body>
+<div class="stage" data-stage><iframe title="Дизайн главной" data-frame></iframe></div>
+<div class="pick" data-pick>
+  <button class="pick__btn" type="button" aria-expanded="false" aria-label="Выбрать дизайн" data-toggle>5</button>
+  <div class="pick__menu">
+    <button type="button" data-v="1" data-src="/kalina-art-prototype/">Дизайн 1</button>
+    <button type="button" data-v="2" data-src="/kalina-art-prototype/v2/">Дизайн 2</button>
+    <button type="button" data-v="3" data-src="/kalina-art-prototype/v3/">Дизайн 3</button>
+    <button type="button" data-v="4" data-src="/kalina-art-prototype/v4/">Дизайн 4</button>
+    <button type="button" data-v="5" data-src="/kalina-art-prototype/v5/">Дизайн 5</button>
+    <hr>
+    <button type="button" data-size="desk">Компьютер</button>
+    <button type="button" data-size="phone">Телефон</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var pick = document.querySelector('[data-pick]'), toggle = document.querySelector('[data-toggle]');
+    var frame = document.querySelector('[data-frame]'), stage = document.querySelector('[data-stage]');
+    var vs = [].slice.call(document.querySelectorAll('[data-v]')), sizes = [].slice.call(document.querySelectorAll('[data-size]'));
+    var state = { v: '5', size: 'desk' };
+    var m = location.hash.match(/^#([1-5])(?:-(phone))?$/);
+    if (m) { state.v = m[1]; state.size = m[2] ? 'phone' : 'desk'; }
+    function open(on) { pick.classList.toggle('is-open', on); toggle.setAttribute('aria-expanded', String(on)); }
+    function render() {
+      vs.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.v === state.v)); });
+      sizes.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.size === state.size)); });
+      var src = document.querySelector('[data-v="' + state.v + '"]').dataset.src;
+      if (frame.getAttribute('src') !== src) frame.setAttribute('src', src);
+      stage.classList.toggle('is-phone', state.size === 'phone');
+      toggle.textContent = state.v;
+      history.replaceState(null, '', '#' + state.v + (state.size === 'phone' ? '-phone' : ''));
+    }
+    toggle.addEventListener('click', function () { open(!pick.classList.contains('is-open')); });
+    vs.forEach(function (b) { b.addEventListener('click', function () { state.v = b.dataset.v; render(); open(false); }); });
+    sizes.forEach(function (b) { b.addEventListener('click', function () { state.size = b.dataset.size; render(); open(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') open(false); });
+    // клик по странице дизайна (внутри iframe) закрывает меню: окно теряет фокус
+    window.addEventListener('blur', function () { open(false); });
+    render();
+  })();
+</script>
+</body>
+</html>

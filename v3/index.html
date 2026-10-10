@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="ru" data-proto>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Авторская галерея | KALINA ART — вариант 3</title>
+<meta name="description" content="Кураторская коллекция современной живописи и графики: импрессионизм, экспрессионизм, абстракция. Подбор картин для дома, примерка в интерьере, картина на заказ.">
+<link rel="canonical" href="https://kalina.art/v3/">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KALINA-ART">
+<meta property="og:title" content="Авторская галерея | KALINA ART — вариант 3">
+<meta property="og:description" content="Кураторская коллекция современной живописи и графики: импрессионизм, экспрессионизм, абстракция. Подбор картин для дома, примерка в интерьере, картина на заказ.">
+<meta property="og:image" content="https://static.tildacdn.com/tild6564-3830-4336-b661-363534363462/100f2f2152383c021c69.jpg">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://thb.tildacdn.com">
+<link rel="preconnect" href="https://static.tildacdn.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pt-root-ui">
+<link rel="stylesheet" href="/kalina-art-prototype/assets/tokens.css?v=710496ec">
+<link rel="stylesheet" href="/kalina-art-prototype/assets/site-v3.css?v=92948f30">
+</head>
+<body class="design-v3">
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="hdr" data-hdr>
+  <div class="wrap hdr__row">
+    <a class="logo" href="/kalina-art-prototype/v3/" aria-label="KALINA ART — на главную">
+      <img src="https://static.tildacdn.com/tild6530-6339-4133-a334-653538363737/KA_logo_R.svg" alt="KALINA ART" width="230" height="34">
+    </a>
+    <div class="hdr__center">
+      <button class="icon-btn" type="button" data-search-toggle aria-expanded="false" aria-controls="search-input" aria-label="Поиск">
+        <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+      </button>
+    <nav class="nav" aria-label="Главное меню">
+                      <a class="nav__link" href="/kalina-art-prototype/agentstvo/">Агентство</a>
+                              <a class="nav__link" href="/kalina-art-prototype/galereya/">Галерея</a>
+                              <div class="nav__dd">
+          <a class="nav__link" href="/kalina-art-prototype/uslugi/podbor-iskusstva/" aria-haspopup="true">Услуги</a>
+          <div class="nav__menu">
+                        <a href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства</a>
+                        <a href="/kalina-art-prototype/uslugi/primerka-kartin/">Примерка картин</a>
+                        <a href="/kalina-art-prototype/uslugi/kartina-na-zakaz/">Картина на заказ</a>
+                        <a href="/kalina-art-prototype/uslugi/podbor-v-podarok/">Подбор в подарок</a>
+                      </div>
+        </div>
+                              <a class="nav__link" href="/kalina-art-prototype/kontakty/">Контакты</a>
+                  </nav>
+  <form class="hdr__search" role="search" action="/kalina-art-prototype/galereya/" data-search>
+    <label class="visually-hidden" for="search-input">Поиск по художникам и работам</label>
+    <input class="hdr__input" id="search-input" name="q" type="search" placeholder="Художник или название работы…" autocomplete="off">
+    <button class="icon-btn search-close" type="button" data-inline-search-close aria-label="Закрыть поиск">×</button>
+    <div class="search__results" data-search-results hidden></div>
+  </form>
+    </div>
+    <div class="hdr__tools">
+
+      <a class="icon-btn hdr__msg" href="https://t.me/Kalinaart_official" target="_blank" rel="noopener" aria-label="Написать в Telegram"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4.5 3.5 11l5.5 2 2 6 3.2-4.1 4.8 3.6 1.5-14Z"/><path d="m9 13 7.5-5.5"/></svg>
+</a>
+      <a class="icon-btn hdr__msg" href="https://wa.me/79646264521" target="_blank" rel="noopener" aria-label="Написать в WhatsApp"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20.5 5.3 16.6A8.3 8.3 0 1 1 8.2 19.3Z"/><path d="M9.3 8.8c-.4 2.9 2.9 6.3 5.9 5.9l.9-1.5-1.9-1-.9.9a4.6 4.6 0 0 1-2.4-2.4l.9-.9-1-1.9Z"/></svg>
+</a>
+      <button class="icon-btn hdr__burger" type="button" data-menu-toggle aria-expanded="false" aria-controls="mnav" aria-label="Меню">
+        <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></svg>
+      </button>
+    </div>
+  </div>
+
+
+
+  <nav class="mnav" id="mnav" aria-label="Меню" hidden>
+    <a href="/kalina-art-prototype/v3/">Главная</a>
+    <a href="/kalina-art-prototype/agentstvo/">Агентство</a>
+    <a href="/kalina-art-prototype/galereya/">Галерея</a>
+    <p class="mnav__group">Услуги</p>
+        <a class="mnav__sub" href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства</a>
+        <a class="mnav__sub" href="/kalina-art-prototype/uslugi/primerka-kartin/">Примерка картин</a>
+        <a class="mnav__sub" href="/kalina-art-prototype/uslugi/kartina-na-zakaz/">Картина на заказ</a>
+        <a class="mnav__sub" href="/kalina-art-prototype/uslugi/podbor-v-podarok/">Подбор в подарок</a>
+        <a href="/kalina-art-prototype/kontakty/">Контакты</a>
+    <p class="mnav__contacts">
+      <a href="tel:+79646264521">+7 964 626-45-21</a>
+      <a href="https://t.me/Kalinaart_official" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://wa.me/79646264521" target="_blank" rel="noopener">WhatsApp</a>
+    </p>
+  </nav>
+</header>
+<main id="main">
+
+<section class="gallery-hero" aria-labelledby="hero-title">
+  <div class="wrap gallery-hero__heading">
+    <h1 id="hero-title"><span>Искусство,</span><span>созвучное <em>вашей душе</em></span></h1>
+  </div>
+  <div class="wrap gallery-hero__stage">
+    <figure class="gallery-hero__photo">
+      <img src="https://static.tildacdn.com/tild6564-3830-4336-b661-363534363462/100f2f2152383c021c69.jpg" alt="Татьяна Калиниченко на выставке среди картин" fetchpriority="high" decoding="async">
+      <figcaption>Татьяна Калиниченко · основатель KALINA ART</figcaption>
+    </figure>
+    <div class="gallery-hero__intro">
+      <p class="gallery-hero__label">Галерея и арт-агентство<br>Татьяны Калиниченко</p>
+      <p class="gallery-hero__lead">Живопись и графика современных художников, отобранная вручную. Искренние работы с внутренним светом.</p>
+      <div class="gallery-hero__actions">
+        <a class="gallery-cta" href="/kalina-art-prototype/galereya/"><span>В галерею</span><span aria-hidden="true">↗</span></a>
+        <a class="gallery-text-link" href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подобрать картину <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bio" aria-labelledby="bio-title">
+  <div class="wrap bio__grid">
+    <figure class="photo bio__photo">
+  <img src="https://static.tildacdn.com/tild3137-3630-4833-a531-393032393337/IMG_7634.jpeg" alt="Татьяна Калиниченко дома, на фоне картин из своего собрания" loading="lazy" decoding="async">
+  
+</figure>
+    <div class="bio__body">
+      <p class="bio__intro">За каждой работой —<br>личный выбор.</p>
+      <h2 class="bio__name" id="bio-title">Татьяна Калиниченко</h2>
+      <p class="bio__roles">Коллекционер, арт-агент, куратор</p>
+            <p class="bio__text">Галерист, коллекционер и основатель художественного агентства KALINA-ART. В её частном собрании — работы Евгения Мациевского, Ольги Плужниковой-Орловой, Ирины Покладовой, Елены Щепетовой, Константина Сутягина и других мастеров.</p>
+            <p class="bio__text">Татьяна годами дружит с художниками и поэтому находит редкие работы, созданные ради самого творчества. Её фокус — современный импрессионизм, экспрессионизм и абстракция, наполненная живой энергией.</p>
+            <p class="bio__text bio__text--mission">Её миссия — помочь вам наполнить дом искусством добрым, тёплым и настоящим.</p>
+            <div class="bio__actions">
+        <a class="btn btn--ghost" href="/kalina-art-prototype/galereya/">В галерею</a>
+        <a class="link-arrow" href="/kalina-art-prototype/agentstvo/">Об агентстве <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17m-5-5 5 5-5 5"/></svg>
+</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" aria-labelledby="facts-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title" id="facts-title">Почему KALINA-ART</h2>
+    </div>
+    <ul class="why__list">
+            <li><span class="why__value"><span class="why__num">2001</span><span>начало коллекции</span></span><span class="why__text">Татьяна собирает искусство — 25 лет коллекционирования</span></li>
+            <li><span class="why__value"><span class="why__num">400+</span><span> работ</span></span><span class="why__text">живописи и графики в её частном собрании</span></li>
+            <li><span class="why__value"><span class="why__num">100+</span><span> художников</span></span><span class="why__text">многолетняя дружба и доверительные отношения</span></li>
+            <li><span class="why__value"><span class="why__num">26</span><span> лет</span></span><span class="why__text">управленческого опыта в международных корпорациях — системный подход к каждому проекту</span></li>
+          </ul>
+  </div>
+</section>
+
+<section class="sec collection" aria-labelledby="works-title" data-card-style="mat">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title" id="works-title">Работы в галерее</h2>
+      <a class="link-arrow" href="/kalina-art-prototype/galereya/">Вся галерея · 33 <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17m-5-5 5 5-5 5"/></svg>
+</a>
+    </div>
+    <div class="works" data-feed data-shown="12" data-artist="" data-exclude="">
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kislitsyn-strazhniki-ch-1/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor6536-6563-4733-a464-303231306162/-/resize/600x/8be4dbc6692f42700c85ac0fd0125a60.jpg" alt="Кислицын И. В. — «Стражники ч. 1», 2026" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kislitsyn-strazhniki-ch-1/" data-f="title">Стражники ч. 1</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kislitsyn/" data-f="artist">Кислицын И. В.</a>
+  <p class="card__meta" data-f="size">150 × 100 см</p>
+  <p class="card__price" data-f="price">Цена по запросу</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kislitsyn-strazhniki-ch-2/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor3831-6561-4365-b761-646532336163/-/resize/600x/4a343779ded5f546293b6b0614ccdf7d.jpg" alt="Кислицын И. В. — «Стражники ч. 2», 2026" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kislitsyn-strazhniki-ch-2/" data-f="title">Стражники ч. 2</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kislitsyn/" data-f="artist">Кислицын И. В.</a>
+  <p class="card__meta" data-f="size">150 × 100 см</p>
+  <p class="card__price" data-f="price">Цена по запросу</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-kuryaschaya-za-stolom/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor3730-3636-4839-a364-386330623062/-/resize/600x/e8e96dbc562f868330658ae320621837.jpg" alt="Кузьмин Р. А. — «Курящая за столом»" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-kuryaschaya-za-stolom/" data-f="title">Курящая за столом</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
+  <p class="card__meta" data-f="size">100 × 80 см</p>
+  <p class="card__price" data-f="price">Цена по запросу</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-zvezda-polyn/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor3663-3135-4063-a233-646239613533/-/resize/600x/4329f13fc9bcfa66601932349874890e.jpg" alt="Кузьмин Р. А. — «Звезда Полынь», 2023" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-zvezda-polyn/" data-f="title">Звезда Полынь</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
+  <p class="card__meta" data-f="size">120 × 100 см</p>
+  <p class="card__price" data-f="price">500 000 ₽</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-kurilschitsa/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/tild6535-6632-4466-a236-306235656264/-/resize/600x/IMG_8149.jpeg" alt="Кузьмин Р. А. — «Курильщица»" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-kurilschitsa/" data-f="title">Курильщица</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
+  <p class="card__meta" data-f="size">100 × 80 см</p>
+  <p class="card__price" data-f="price">600 000 ₽</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-rybaki-v-batumi/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor3632-3361-4465-a364-656265303837/-/resize/600x/85cad0f1f9ce8341682a55829dbe8b6c.jpg" alt="Кузьмин Р. А. — «Рыбаки в Батуми», 2025" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-rybaki-v-batumi/" data-f="title">Рыбаки в Батуми</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
+  <p class="card__meta" data-f="size">70 × 50 см</p>
+  <p class="card__price" data-f="price">110 000 ₽</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-drevo/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor6139-3531-4032-a634-316635616238/-/resize/600x/f5c54b984ea9b7ab3e46922d0cc6cceb.jpg" alt="Кузьмин Р. А. — «Древо», 2015" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-drevo/" data-f="title">Древо</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
+  <p class="card__meta" data-f="size">90 × 70 см</p>
+  <p class="card__price" data-f="price">600 000 ₽</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-monument/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor3566-3038-4436-b138-313266366537/-/resize/600x/6e06258264f0e21ffaf3957ab0c2aeb8.jpg" alt="Кузьмин Р. А. — «Монумент», 2022" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-monument/" data-f="title">Монумент</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
+  <p class="card__meta" data-f="size">96 × 40 см</p>
+  <p class="card__price" data-f="price">200 000 ₽</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-chetyre-ugla-neba/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor3632-6331-4332-a231-633665313861/-/resize/600x/c2c663bab8df267542104deddcfb1016.jpg" alt="Кузьмин Р. А. — «Четыре угла неба», 2015" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-chetyre-ugla-neba/" data-f="title">Четыре угла неба</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
+  <p class="card__meta" data-f="size">120 × 100 см</p>
+  <p class="card__price" data-f="price">600 000 ₽</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-molniya/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor3066-6230-4531-a431-366163363966/-/resize/600x/35bdd645f3572e0d7c9f6197b9da763a.jpg" alt="Кузьмин Р. А. — «Молния», 2018" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-molniya/" data-f="title">Молния</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
+  <p class="card__meta" data-f="size">104 × 90 см</p>
+  <p class="card__price" data-f="price">300 000 ₽</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-boginya-vesny/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor3331-3963-4664-b334-626131373035/-/resize/600x/b079dc3d59c6dc5eaa174cec72f5ab1a.jpg" alt="Кузьмин Р. А. — «Богиня весны», 2015" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-boginya-vesny/" data-f="title">Богиня весны</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
+  <p class="card__meta" data-f="size">138 × 69 см</p>
+  <p class="card__price" data-f="price">200 000 ₽</p>
+</article>
+<article class="card">
+  <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-boginya-oseni/" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="https://thb.tildacdn.com/stor6531-6334-4237-b530-373463636163/-/resize/600x/a3497b3688657e9c3b6821b3344df329.jpg" alt="Кузьмин Р. А. — «Богиня осени», 2015" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-boginya-oseni/" data-f="title">Богиня осени</a></h3>
+  <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
+  <p class="card__meta" data-f="size">138 × 69 см</p>
+  <p class="card__price" data-f="price">200 000 ₽</p>
+</article>
+</div>
+<div class="more"><button class="btn btn--ghost" type="button" data-more>Показать ещё</button></div>
+  </div>
+</section>
+
+<section class="sec services-section" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title" id="services-title">Услуги</h2>
+    </div>
+    <ol class="service-trio">
+            <li class="service-trio__item">
+        <a class="service-trio__image" href="/kalina-art-prototype/uslugi/podbor-iskusstva/" tabindex="-1" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1647082550285-119acfd169f2?w=900&amp;q=70&amp;auto=format" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="service-trio__heading">
+          <span class="service-trio__number" aria-hidden="true">01</span>
+          <h3><a href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства<span aria-hidden="true">↗</span></a></h3>
+        </div>
+        <p class="service-trio__text">Подберём картины, графику и скульптуру под стиль и атмосферу вашего интерьера — от одной работы до коллекции для дома или проекта.</p>
+        <p class="service-trio__price">Цена по запросу</p>
+      </li>
+            <li class="service-trio__item">
+        <a class="service-trio__image" href="/kalina-art-prototype/uslugi/primerka-kartin/" tabindex="-1" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1634638415860-cef1aafb60c4?w=900&amp;q=70&amp;auto=format" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="service-trio__heading">
+          <span class="service-trio__number" aria-hidden="true">02</span>
+          <h3><a href="/kalina-art-prototype/uslugi/primerka-kartin/">Примерка картин<span aria-hidden="true">↗</span></a></h3>
+        </div>
+        <p class="service-trio__text">Привезём выбранные работы к вам домой, чтобы вы увидели масштаб, цвет и фактуру в своём интерьере.</p>
+        <p class="service-trio__price">7 000 ₽ за выезд в пределах МКАД, до 5 работ</p>
+      </li>
+            <li class="service-trio__item">
+        <a class="service-trio__image" href="/kalina-art-prototype/uslugi/kartina-na-zakaz/" tabindex="-1" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1593382067395-ace3045a1547?w=900&amp;q=70&amp;auto=format" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="service-trio__heading">
+          <span class="service-trio__number" aria-hidden="true">03</span>
+          <h3><a href="/kalina-art-prototype/uslugi/kartina-na-zakaz/">Картина на заказ<span aria-hidden="true">↗</span></a></h3>
+        </div>
+        <p class="service-trio__text">Подберём художника под вашу идею, референс или настроение и сопроводим работу от эскиза до готовой картины.</p>
+        <p class="service-trio__price">Цена по запросу</p>
+      </li>
+            <li class="service-trio__item">
+        <a class="service-trio__image" href="/kalina-art-prototype/uslugi/podbor-v-podarok/" tabindex="-1" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=900&amp;q=70&amp;auto=format" alt="" loading="lazy" decoding="async">
+        </a>
+        <div class="service-trio__heading">
+          <span class="service-trio__number" aria-hidden="true">04</span>
+          <h3><a href="/kalina-art-prototype/uslugi/podbor-v-podarok/">Подбор в подарок<span aria-hidden="true">↗</span></a></h3>
+        </div>
+        <p class="service-trio__text">Поможем выбрать картину в подарок: расспросим о человеке и его доме, предложим несколько работ и упакуем выбранную.</p>
+        <p class="service-trio__price">Цена по запросу</p>
+      </li>
+          </ol>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="expo-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title" id="expo-title">Выставки и встречи с художниками</h2>
+      <p class="sec-lead">Фото и видео с выставок, из мастерских и со встреч с авторами галереи.</p>
+    </div>
+    <div class="expo">
+            <figure class="expo__item expo__item--video">
+        <div class="expo__media">
+          <img src="https://images.unsplash.com/photo-1569783721854-33a99b4c0bae?w=1400&amp;q=75&amp;auto=format" alt="Гости выставки у большой картины" loading="lazy" decoding="async">
+                    
+        </div>
+        <figcaption class="expo__caption">Видео: встреча с художником</figcaption>
+      </figure>
+            <figure class="expo__item">
+        <div class="expo__media">
+          <img src="https://images.unsplash.com/photo-1735605917461-4c1b77a6616f?w=900&amp;q=75&amp;auto=format" alt="Зал, плотно увешанный картинами" loading="lazy" decoding="async">
+                    
+        </div>
+        <figcaption class="expo__caption">Зал, плотно увешанный картинами</figcaption>
+      </figure>
+            <figure class="expo__item">
+        <div class="expo__media">
+          <img src="https://images.unsplash.com/photo-1566063506578-24fef8099f05?w=900&amp;q=75&amp;auto=format" alt="Двое гостей рассматривают работу на выставке" loading="lazy" decoding="async">
+                    
+        </div>
+        <figcaption class="expo__caption">Двое гостей рассматривают работу на выставке</figcaption>
+      </figure>
+            <figure class="expo__item">
+        <div class="expo__media">
+          <img src="https://images.unsplash.com/photo-1563293743-a9761195b52e?w=900&amp;q=75&amp;auto=format" alt="Посетительница у стены с картинами" loading="lazy" decoding="async">
+                    
+        </div>
+        <figcaption class="expo__caption">Посетительница у стены с картинами</figcaption>
+      </figure>
+            <figure class="expo__item">
+        <div class="expo__media">
+          <img src="https://images.unsplash.com/photo-1606819717115-9159c900370b?w=900&amp;q=75&amp;auto=format" alt="Гостья галереи перед живописью" loading="lazy" decoding="async">
+                    
+        </div>
+        <figcaption class="expo__caption">Гостья галереи перед живописью</figcaption>
+      </figure>
+          </div>
+  </div>
+</section>
+</main>
+<footer class="ftr">
+  <div class="wrap ftr__main">
+    <div class="ftr__brand">
+      <a class="logo logo--lg" href="/kalina-art-prototype/v3/" aria-label="KALINA ART — на главную"><img src="https://static.tildacdn.com/tild6530-6339-4133-a334-653538363737/KA_logo_R.svg" alt="KALINA ART" width="270" height="40" loading="lazy"></a>
+      <p class="ftr__tagline">Галерея и художественное агентство Татьяны Калиниченко</p>
+    </div>
+    <nav class="ftr__col" aria-label="Галерея">
+      <p class="ftr__h">Галерея</p>
+      <a href="/kalina-art-prototype/galereya/">Все работы</a>
+      <a href="/kalina-art-prototype/agentstvo/">Агентство</a>
+      <a href="/kalina-art-prototype/kontakty/">Контакты</a>
+    </nav>
+    <nav class="ftr__col" aria-label="Услуги">
+      <p class="ftr__h">Услуги</p>
+            <a href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства</a>
+            <a href="/kalina-art-prototype/uslugi/primerka-kartin/">Примерка картин</a>
+            <a href="/kalina-art-prototype/uslugi/kartina-na-zakaz/">Картина на заказ</a>
+            <a href="/kalina-art-prototype/uslugi/podbor-v-podarok/">Подбор в подарок</a>
+          </nav>
+    <div class="ftr__col">
+      <p class="ftr__h">Связаться</p>
+      <a href="tel:+79646264521">+7 964 626-45-21</a>
+      <a href="mailto:tatiana@kalina.art">tatiana@kalina.art</a>
+      <a href="https://t.me/Kalinaart_official" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://wa.me/79646264521" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+  </div>
+  <div class="ftr__bar">
+    <div class="wrap ftr__bar-in">
+      <span>© 2026 KALINA ART</span>
+      <a href="/kalina-art-prototype/politika/">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+<dialog class="lead-dlg" id="lead" aria-labelledby="lead-title">
+  <button class="lead__close" type="button" data-lead-close aria-label="Закрыть">×</button>
+  <h2 class="h3" id="lead-title">Заявка</h2>
+  <p class="lead__subject" data-lead-subject hidden></p>
+  <form class="form" id="lead-form" data-lead-form novalidate>
+  <input type="hidden" name="subject" value="">
+  <label for="lead-form-name"><span>Имя <span class="req" aria-hidden="true">*</span></span><input name="name" id="lead-form-name" type="text" autocomplete="name" required></label>
+  <label for="lead-form-phone"><span>Телефон <span class="req" aria-hidden="true">*</span></span><input name="phone" id="lead-form-phone" type="tel" autocomplete="tel" required></label>
+  <label for="lead-form-email"><span>Email <span class="muted">— по желанию</span></span><input name="email" id="lead-form-email" type="email" autocomplete="email" spellcheck="false"></label>
+  <label for="lead-form-comment"><span>Комментарий</span><textarea name="comment" id="lead-form-comment" rows="3" placeholder="Например: подобрать несколько картин для гостиной…"></textarea></label>
+  <label class="check" for="lead-form-consent"><input type="checkbox" name="consent" id="lead-form-consent" required> <span>Согласен на обработку персональных данных по <a href="/kalina-art-prototype/politika/">политике конфиденциальности</a></span></label>
+  <button class="btn btn--wide" type="submit">Отправить</button>
+  <p class="form-msg" data-msg role="status" aria-live="polite" hidden></p>
+</form>
+</dialog>
+<div class="cookie" id="cookie" hidden>
+  <p>Мы используем cookie для статистики посещений. <a href="/kalina-art-prototype/politika/">Подробнее</a></p>
+  <button class="btn btn--small" type="button" data-cookie-ok>Понятно</button>
+</div>
+<template id="tpl-card"><article class="card">
+  <a class="card__img" href="" data-f="link" tabindex="-1" aria-hidden="true">
+    <img src="" alt="" loading="lazy" decoding="async" data-f="img">
+  </a>
+  <h3 class="card__title"><a href="" data-f="title"></a></h3>
+  <a class="card__artist" href="" data-f="artist"></a>
+  <p class="card__meta" data-f="size"></p>
+  <p class="card__price" data-f="price"></p>
+</article>
+</template>
+<script src="/kalina-art-prototype/assets/site.js?v=b3c4b7db" defer></script>
+<script src="/kalina-art-prototype/assets/header-v3.js?v=cd12867f" defer></script></body>
+</html>
