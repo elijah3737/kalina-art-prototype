@@ -39,8 +39,8 @@
     var num = function (c, a) { return parseInt(c.getAttribute(a), 10) || 0; };
     return list.slice().sort(function (a, b) {
       if (s === 'price-asc' || s === 'price-desc') {
-        var pa = num(a, 'data-price'), pb = num(b, 'data-price');
-        // «по запросу» — в конце при любом направлении
+        // data-rank — место по цене (скрытая цена тоже считается); 0 — цены нет совсем, такие в конце при любом направлении
+        var pa = num(a, 'data-rank'), pb = num(b, 'data-rank');
         if (!pa !== !pb) return pa ? -1 : 1;
         if (pa !== pb) return s === 'price-asc' ? pa - pb : pb - pa;
       }
@@ -115,26 +115,8 @@
   more.addEventListener('click', function () { shown += STEP; apply(true); });
   $$('[data-flt-reset]').forEach(function (b) { b.addEventListener('click', reset); });
 
-  // на компьютере открыта одна группа: клик мимо или Esc закрывает
-  var groupsEl = $$('.flt__g', form);
-  groupsEl.forEach(function (g) {
-    g.addEventListener('toggle', function () {
-      if (!g.open || !window.matchMedia('(min-width: 60rem)').matches) return;
-      groupsEl.forEach(function (o) { if (o !== g) o.open = false; });
-      // список не должен уходить за правый край окна
-      g.classList.remove('is-flip');
-      var pop = $('.flt__pop', g);
-      if (pop.getBoundingClientRect().right > document.documentElement.clientWidth - 8) g.classList.add('is-flip');
-    });
-  });
-  document.addEventListener('click', function (e) {
-    if (!window.matchMedia('(min-width: 60rem)').matches) return;
-    if (!e.target.closest('.flt__g')) groupsEl.forEach(function (g) { g.open = false; });
-  });
   document.addEventListener('keydown', function (e) {
-    if (e.key !== 'Escape') return;
-    groupsEl.forEach(function (g) { g.open = false; });
-    setPanel(false);
+    if (e.key === 'Escape') setPanel(false);
   });
 
   // на телефоне фильтры — шторка на весь экран

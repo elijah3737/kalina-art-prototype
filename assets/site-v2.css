@@ -278,3 +278,6 @@ dialog.lead-dlg .h3 { padding-right: var(--space-2xl); font-size: var(--v2-h3); 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 1ms !important; animation-duration: 1ms !important; scroll-behavior: auto !important; }
 }
+
+/* примерка в интерьере — только в дизайне 5 */
+.card__room { display: none; }

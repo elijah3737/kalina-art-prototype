@@ -168,6 +168,13 @@
     if (tech) tech.textContent = w.m ? w.m + ', ' : '';
     if (node.hasAttribute('data-work')) node.setAttribute('data-work', w.id);
     if (pick) { pick.dataset.title = w.t; pick.dataset.artist = w.an; pick.setAttribute('aria-label', 'Отложить для примерки: ' + w.t); }
+    // кнопка «Примерить в интерьере»: без размера или фото — убираем
+    var room = $('[data-f=room]', node);
+    if (room && w.wc > 0 && w.hc > 0 && w.ib) {
+      room.dataset.roomImg = w.ib; room.dataset.roomW = w.wc; room.dataset.roomH = w.hc;
+      room.dataset.roomT = w.t; room.dataset.roomA = w.an; room.dataset.roomS = w.ri || '';
+      room.setAttribute('aria-label', 'Примерить в интерьере: ' + w.t);
+    } else if (room) room.remove();
     return node;
   }
   $$('[data-more]').forEach(function (btn) {
@@ -219,8 +226,27 @@
     form.elements.name.focus({ preventScroll: true });
   }
   function closeLead() { if (dlg.open) { if (typeof dlg.close === 'function') dlg.close(); else dlg.removeAttribute('open'); } }
-  $$('[data-lead]').forEach(function (b) {
-    b.addEventListener('click', function () { openLead(b.dataset.lead, b.dataset.leadTitle, b.dataset.leadNote); });
+  // делегирование: кнопки заявки появляются и позже (окно примерки, дозагруженные карточки)
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-lead]');
+    if (b && dlg) openLead(b.dataset.lead, b.dataset.leadTitle, b.dataset.leadNote);
+  });
+
+  // ---------- примерка в интерьере: assets/room.js грузим по первому клику ----------
+  var roomJs = null;
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-room]');
+    if (!b || !b.dataset.roomImg) return;
+    e.preventDefault();
+    if (!roomJs) roomJs = new Promise(function (ok, fail) {
+      var sc = document.createElement('script');
+      sc.src = document.body.dataset.roomJs;
+      sc.onload = ok;
+      sc.onerror = function () { roomJs = null; fail(); };
+      document.head.appendChild(sc);
+    });
+    b.setAttribute('aria-busy', 'true');
+    roomJs.then(function () { b.removeAttribute('aria-busy'); window.kaRoom.open(b); }, function () { b.removeAttribute('aria-busy'); });
   });
   if (dlg) {
     $('[data-lead-close]', dlg).addEventListener('click', closeLead);

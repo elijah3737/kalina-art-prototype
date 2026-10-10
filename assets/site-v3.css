@@ -79,3 +79,6 @@ body{font-size:16px}.concept-bar{padding:6px var(--gutter);display:flex;align-it
 .hdr__tools{margin-left:0;margin-right:0}
 @media(min-width:960px){.hdr__tools{display:none}}
 @media(max-width:959px){.hdr__row{gap:12px}.hdr__center{width:auto;max-width:none;gap:8px;justify-content:flex-end}.hdr.is-search .hdr__center{flex:1}.hdr.is-search .hdr__row>.logo{display:none}.hdr__center .hdr__input{font-size:16px}.hdr__tools{margin-left:0}.hdr__center .search__results{left:-44px;top:calc(100% + 12px);right:0}}
+
+/* примерка в интерьере — только в дизайне 5 */
+.card__room { display: none; }

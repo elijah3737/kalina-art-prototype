@@ -395,3 +395,6 @@ html.flt-lock { overflow: hidden; }
   .flt__g.is-flip .flt__pop { left: auto; right: -1px; }
   .flt__bar { margin-top: var(--space-lg); }
 }
+
+/* примерка в интерьере — только в дизайне 5 */
+.card__room { display: none; }

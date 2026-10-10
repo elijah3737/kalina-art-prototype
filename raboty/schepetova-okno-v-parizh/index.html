@@ -20,15 +20,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;1,400&display=swap">
 <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pt-root-ui">
 <link rel="stylesheet" href="/kalina-art-prototype/assets/tokens.css?v=710496ec">
-<link rel="stylesheet" href="/kalina-art-prototype/assets/site-v5.css?v=ac7e0a53">
+<link rel="stylesheet" href="/kalina-art-prototype/assets/site-v5.css?v=883e046b">
 </head>
-<body>
+<body data-room-js="/kalina-art-prototype/assets/room.js?v=4300d537">
 <a class="skip" href="#main">Перейти к содержимому</a>
 <header class="hdr" data-hdr>
   <div class="wrap hdr__top">
     <a class="logo" href="/kalina-art-prototype/v5/" aria-label="KALINA-ART — на главную">
       <img src="https://static.tildacdn.com/tild6530-6339-4133-a334-653538363737/KA_logo_R.svg" alt="KALINA-ART" width="230" height="34">
     </a>
+    <nav class="nav" aria-label="Главное меню">
+                      <a class="nav__link" href="/kalina-art-prototype/agentstvo/">Агентство</a>
+                              <a class="nav__link" href="/kalina-art-prototype/galereya/">Галерея</a>
+                              <div class="nav__dd">
+          <a class="nav__link" href="/kalina-art-prototype/uslugi/podbor-iskusstva/" aria-haspopup="true">Услуги</a>
+          <div class="nav__menu">
+                        <a href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства</a>
+                        <a href="/kalina-art-prototype/uslugi/primerka-kartin/">Примерка картин</a>
+                        <a href="/kalina-art-prototype/uslugi/kartina-na-zakaz/">Картина на заказ</a>
+                        <a href="/kalina-art-prototype/uslugi/podbor-v-podarok/">Подбор в подарок</a>
+                      </div>
+        </div>
+                              <a class="nav__link" href="/kalina-art-prototype/kontakty/">Контакты</a>
+                  </nav>
     <form class="hdr__search" role="search" action="/kalina-art-prototype/galereya/" data-search>
       <label class="visually-hidden" for="search-input">Поиск по художникам и работам</label>
       <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
@@ -51,20 +65,6 @@
     </div>
   </div>
 
-  <nav class="wrap nav" aria-label="Главное меню">
-                <a class="nav__link" href="/kalina-art-prototype/agentstvo/">Агентство</a>
-                      <a class="nav__link" href="/kalina-art-prototype/galereya/">Галерея</a>
-                      <div class="nav__dd">
-        <a class="nav__link" href="/kalina-art-prototype/uslugi/podbor-iskusstva/" aria-haspopup="true">Услуги</a>
-        <div class="nav__menu">
-                    <a href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства</a>
-                    <a href="/kalina-art-prototype/uslugi/primerka-kartin/">Примерка картин</a>
-                    <a href="/kalina-art-prototype/uslugi/kartina-na-zakaz/">Картина на заказ</a>
-                    <a href="/kalina-art-prototype/uslugi/podbor-v-podarok/">Подбор в подарок</a>
-                  </div>
-      </div>
-                      <a class="nav__link" href="/kalina-art-prototype/kontakty/">Контакты</a>
-            </nav>
 
   <nav class="mnav" id="mnav" aria-label="Меню" hidden>
     <a href="/kalina-art-prototype/v5/">Главная</a>
@@ -90,6 +90,33 @@
   <div class="work">
     <div class="work__media">
       <figure class="work__main"><img src="https://static.tildacdn.com/stor3036-3830-4538-b833-306661353661/ee7499ea552eedf90428f5713d7e778f.jpg" alt="Щепетова Е. А. — «Окно в Париж»" fetchpriority="high" data-main></figure>
+                  <div class="inroom">
+        <div class="inroom__head"><p class="inroom__h">Эта работа в интерьере</p><button class="btn btn--ghost btn--small" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3036-3830-4538-b833-306661353661/-/resize/1200x/ee7499ea552eedf90428f5713d7e778f.jpg" data-room-w="50" data-room-h="75" data-room-t="Окно в Париж" data-room-a="Щепетова Е. А." data-room-s="Классика|Современная классика"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+Примерить в интерьере</button></div>
+        <div class="inroom__list">
+                    <button class="inroom__item" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3036-3830-4538-b833-306661353661/-/resize/1200x/ee7499ea552eedf90428f5713d7e778f.jpg" data-room-w="50" data-room-h="75" data-room-t="Окно в Париж" data-room-a="Щепетова Е. А." data-room-s="Классика|Современная классика" data-room-start="klassika" aria-label="Посмотреть в интерьере: Классика">
+            <span class="inroom__scene" style="aspect-ratio:1536/1024">
+              <img src="/kalina-art-prototype/assets/interiors/klassika-s.webp?v=d141cc85" alt="" loading="lazy" decoding="async">
+              <img class="inroom__art" src="https://thb.tildacdn.com/stor3036-3830-4538-b833-306661353661/-/resize/300x/ee7499ea552eedf90428f5713d7e778f.jpg" alt="" loading="lazy" decoding="async" style="left:45.752%;top:32.739%;width:8.496%;height:19.116%">
+            </span>
+            <span class="inroom__t">Классика</span>
+          </button>
+                    <button class="inroom__item" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3036-3830-4538-b833-306661353661/-/resize/1200x/ee7499ea552eedf90428f5713d7e778f.jpg" data-room-w="50" data-room-h="75" data-room-t="Окно в Париж" data-room-a="Щепетова Е. А." data-room-s="Классика|Современная классика" data-room-start="sovremennaya-klassika" aria-label="Посмотреть в интерьере: Современная классика">
+            <span class="inroom__scene" style="aspect-ratio:1536/1024">
+              <img src="/kalina-art-prototype/assets/interiors/sovremennaya-klassika-s.webp?v=1ea6d8ec" alt="" loading="lazy" decoding="async">
+              <img class="inroom__art" src="https://thb.tildacdn.com/stor3036-3830-4538-b833-306661353661/-/resize/300x/ee7499ea552eedf90428f5713d7e778f.jpg" alt="" loading="lazy" decoding="async" style="left:45.98%;top:34.155%;width:8.04%;height:18.091%">
+            </span>
+            <span class="inroom__t">Современная классика</span>
+          </button>
+                    <button class="inroom__item" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3036-3830-4538-b833-306661353661/-/resize/1200x/ee7499ea552eedf90428f5713d7e778f.jpg" data-room-w="50" data-room-h="75" data-room-t="Окно в Париж" data-room-a="Щепетова Е. А." data-room-s="Классика|Современная классика" data-room-start="minimalizm" aria-label="Посмотреть в интерьере: Минимализм">
+            <span class="inroom__scene" style="aspect-ratio:1536/1024">
+              <img src="/kalina-art-prototype/assets/interiors/minimalizm-s.webp?v=d099d35f" alt="" loading="lazy" decoding="async">
+              <img class="inroom__art" src="https://thb.tildacdn.com/stor3036-3830-4538-b833-306661353661/-/resize/300x/ee7499ea552eedf90428f5713d7e778f.jpg" alt="" loading="lazy" decoding="async" style="left:45.833%;top:42.773%;width:8.203%;height:18.457%">
+            </span>
+            <span class="inroom__t">Минимализм</span>
+          </button>
+                  </div>
+      </div>
           </div>
     <div class="work__info">
       <a class="work__artist" href="/kalina-art-prototype/hudozhniki/schepetova/">Щепетова Е. А.</a>
@@ -118,7 +145,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/schepetova-insomniya/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor3663-3538-4666-a564-383866376561/-/resize/600x/5fc570b542c27035f89475141b33e3f7.jpg" alt="Щепетова Е. А. — «Инсомния», 2021" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/schepetova-insomniya/" data-f="title">Инсомния</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3663-3538-4666-a564-383866376561/-/resize/1200x/5fc570b542c27035f89475141b33e3f7.jpg" data-room-w="75" data-room-h="75" data-room-t="Инсомния" data-room-a="Щепетова Е. А." data-room-s="Минимализм|Скандинавский" data-f="room" aria-label="Примерить в интерьере: Инсомния" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/schepetova-insomniya/" data-f="title">Инсомния</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/schepetova/" data-f="artist">Щепетова Е. А.</a>
   <p class="card__meta" data-f="size">75 × 75 см</p>
   <p class="card__price" data-f="price">300 000 ₽</p>
@@ -127,7 +155,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/schepetova-tishina/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor3130-6235-4561-b534-336233386566/-/resize/600x/03eae911239fb1af8a0d90dae38d56d7.jpg" alt="Щепетова Е. А. — «Тишина»" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/schepetova-tishina/" data-f="title">Тишина</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3130-6235-4561-b534-336233386566/-/resize/1200x/03eae911239fb1af8a0d90dae38d56d7.jpg" data-room-w="40" data-room-h="40" data-room-t="Тишина" data-room-a="Щепетова Е. А." data-room-s="Скандинавский|Минимализм" data-f="room" aria-label="Примерить в интерьере: Тишина" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/schepetova-tishina/" data-f="title">Тишина</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/schepetova/" data-f="artist">Щепетова Е. А.</a>
   <p class="card__meta" data-f="size">40 × 40 см</p>
   <p class="card__price" data-f="price">50 000 ₽</p>
@@ -136,7 +165,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/schepetova-dal/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor3332-6533-4465-a562-376232323431/-/resize/600x/c274fd986cec1fc0ff6f784a31a247db.jpg" alt="Щепетова Е. А. — «Даль»" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/schepetova-dal/" data-f="title">Даль</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3332-6533-4465-a562-376232323431/-/resize/1200x/c274fd986cec1fc0ff6f784a31a247db.jpg" data-room-w="40" data-room-h="40" data-room-t="Даль" data-room-a="Щепетова Е. А." data-room-s="Скандинавский|Минимализм" data-f="room" aria-label="Примерить в интерьере: Даль" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/schepetova-dal/" data-f="title">Даль</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/schepetova/" data-f="artist">Щепетова Е. А.</a>
   <p class="card__meta" data-f="size">40 × 40 см</p>
   <p class="card__price" data-f="price">50 000 ₽</p>
@@ -145,7 +175,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/schepetova-gretsiya-s-vysoty-moego-poleta/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor6632-3233-4338-b665-656632323038/-/resize/600x/17d02edbba35e0b7ddf8fcbb3e1a9597.jpg" alt="Щепетова Е. А. — «Греция с высоты моего полета»" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/schepetova-gretsiya-s-vysoty-moego-poleta/" data-f="title">Греция с высоты моего полета</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor6632-3233-4338-b665-656632323038/-/resize/1200x/17d02edbba35e0b7ddf8fcbb3e1a9597.jpg" data-room-w="105" data-room-h="75" data-room-t="Греция с высоты моего полета" data-room-a="Щепетова Е. А." data-room-s="Классика|Современная классика" data-f="room" aria-label="Примерить в интерьере: Греция с высоты моего полета" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/schepetova-gretsiya-s-vysoty-moego-poleta/" data-f="title">Греция с высоты моего полета</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/schepetova/" data-f="artist">Щепетова Е. А.</a>
   <p class="card__meta" data-f="size">75 × 105 см</p>
   <p class="card__price" data-f="price">400 000 ₽</p>
@@ -160,7 +191,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-rybaki-v-batumi/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor3632-3361-4465-a364-656265303837/-/resize/600x/85cad0f1f9ce8341682a55829dbe8b6c.jpg" alt="Кузьмин Р. А. — «Рыбаки в Батуми», 2025" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-rybaki-v-batumi/" data-f="title">Рыбаки в Батуми</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3632-3361-4465-a364-656265303837/-/resize/1200x/85cad0f1f9ce8341682a55829dbe8b6c.jpg" data-room-w="50" data-room-h="70" data-room-t="Рыбаки в Батуми" data-room-a="Кузьмин Р. А." data-room-s="Лофт|Современная классика" data-f="room" aria-label="Примерить в интерьере: Рыбаки в Батуми" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-rybaki-v-batumi/" data-f="title">Рыбаки в Батуми</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
   <p class="card__meta" data-f="size">70 × 50 см</p>
   <p class="card__price" data-f="price">110 000 ₽</p>
@@ -169,7 +201,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/lena-dmitrieff-seriya-marokko-fantaziya-2/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor6134-3636-4635-a632-343661643162/-/resize/600x/a3bc37566a1c153c641c320011cdcb2d.jpg" alt="Lena Dmitrieff — «Серия Марокко, Фантазия 2», 2017" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/lena-dmitrieff-seriya-marokko-fantaziya-2/" data-f="title">Серия Марокко, Фантазия 2</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor6134-3636-4635-a632-343661643162/-/resize/1200x/a3bc37566a1c153c641c320011cdcb2d.jpg" data-room-w="80" data-room-h="90" data-room-t="Серия Марокко, Фантазия 2" data-room-a="Lena Dmitrieff" data-room-s="Современная классика|Классика" data-f="room" aria-label="Примерить в интерьере: Серия Марокко, Фантазия 2" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/lena-dmitrieff-seriya-marokko-fantaziya-2/" data-f="title">Серия Марокко, Фантазия 2</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/lena-dmitrieff/" data-f="artist">Lena Dmitrieff</a>
   <p class="card__meta" data-f="size">90 × 80 см</p>
   <p class="card__price" data-f="price">300 000 ₽</p>
@@ -178,7 +211,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/popov-tishina-na-ulitse/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor3565-3138-4436-a638-353532653634/-/resize/600x/803f547729c657674769ba1880bc6d56.jpg" alt="Попов Д. Г. — «Тишина на улице», 2016" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/popov-tishina-na-ulitse/" data-f="title">Тишина на улице</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3565-3138-4436-a638-353532653634/-/resize/1200x/803f547729c657674769ba1880bc6d56.jpg" data-room-w="50" data-room-h="60" data-room-t="Тишина на улице" data-room-a="Попов Д. Г." data-room-s="Лофт|Минимализм" data-f="room" aria-label="Примерить в интерьере: Тишина на улице" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/popov-tishina-na-ulitse/" data-f="title">Тишина на улице</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/popov/" data-f="artist">Попов Д. Г.</a>
   <p class="card__meta" data-f="size">60 × 50 см</p>
   <p class="card__price" data-f="price">140 000 ₽</p>
@@ -252,12 +286,13 @@
   <a class="card__img" href="" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="" alt="" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="" data-f="title"></a></h3>
+  <button class="card__room" type="button" data-room data-f="room" aria-label="Примерить в интерьере" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="" data-f="title"></a></h3>
   <a class="card__artist" href="" data-f="artist"></a>
   <p class="card__meta" data-f="size"></p>
   <p class="card__price" data-f="price"></p>
 </article>
 </template>
-<script src="/kalina-art-prototype/assets/site.js?v=b3c4b7db" defer></script>
+<script src="/kalina-art-prototype/assets/site.js?v=d362aedb" defer></script>
 <script src="/kalina-art-prototype/assets/v5.js?v=e3a31601" defer></script></body>
 </html>

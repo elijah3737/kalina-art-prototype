@@ -382,3 +382,6 @@ body.has-pickbar .cookie { bottom: calc(var(--pickbar-h, 4.25rem) + var(--space-
   *, *::before, *::after { transition-duration: 1ms !important; animation-duration: 1ms !important; scroll-behavior: auto !important; }
   .rv { opacity: 1; transform: none; }
 }
+
+/* примерка в интерьере — только в дизайне 5 */
+.card__room { display: none; }

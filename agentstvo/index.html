@@ -19,15 +19,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;1,400&display=swap">
 <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pt-root-ui">
 <link rel="stylesheet" href="/kalina-art-prototype/assets/tokens.css?v=710496ec">
-<link rel="stylesheet" href="/kalina-art-prototype/assets/site-v5.css?v=ac7e0a53">
+<link rel="stylesheet" href="/kalina-art-prototype/assets/site-v5.css?v=883e046b">
 </head>
-<body>
+<body data-room-js="/kalina-art-prototype/assets/room.js?v=4300d537">
 <a class="skip" href="#main">Перейти к содержимому</a>
 <header class="hdr" data-hdr>
   <div class="wrap hdr__top">
     <a class="logo" href="/kalina-art-prototype/v5/" aria-label="KALINA-ART — на главную">
       <img src="https://static.tildacdn.com/tild6530-6339-4133-a334-653538363737/KA_logo_R.svg" alt="KALINA-ART" width="230" height="34">
     </a>
+    <nav class="nav" aria-label="Главное меню">
+                      <a class="nav__link is-current" href="/kalina-art-prototype/agentstvo/">Агентство</a>
+                              <a class="nav__link" href="/kalina-art-prototype/galereya/">Галерея</a>
+                              <div class="nav__dd">
+          <a class="nav__link" href="/kalina-art-prototype/uslugi/podbor-iskusstva/" aria-haspopup="true">Услуги</a>
+          <div class="nav__menu">
+                        <a href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства</a>
+                        <a href="/kalina-art-prototype/uslugi/primerka-kartin/">Примерка картин</a>
+                        <a href="/kalina-art-prototype/uslugi/kartina-na-zakaz/">Картина на заказ</a>
+                        <a href="/kalina-art-prototype/uslugi/podbor-v-podarok/">Подбор в подарок</a>
+                      </div>
+        </div>
+                              <a class="nav__link" href="/kalina-art-prototype/kontakty/">Контакты</a>
+                  </nav>
     <form class="hdr__search" role="search" action="/kalina-art-prototype/galereya/" data-search>
       <label class="visually-hidden" for="search-input">Поиск по художникам и работам</label>
       <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
@@ -50,20 +64,6 @@
     </div>
   </div>
 
-  <nav class="wrap nav" aria-label="Главное меню">
-                <a class="nav__link is-current" href="/kalina-art-prototype/agentstvo/">Агентство</a>
-                      <a class="nav__link" href="/kalina-art-prototype/galereya/">Галерея</a>
-                      <div class="nav__dd">
-        <a class="nav__link" href="/kalina-art-prototype/uslugi/podbor-iskusstva/" aria-haspopup="true">Услуги</a>
-        <div class="nav__menu">
-                    <a href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства</a>
-                    <a href="/kalina-art-prototype/uslugi/primerka-kartin/">Примерка картин</a>
-                    <a href="/kalina-art-prototype/uslugi/kartina-na-zakaz/">Картина на заказ</a>
-                    <a href="/kalina-art-prototype/uslugi/podbor-v-podarok/">Подбор в подарок</a>
-                  </div>
-      </div>
-                      <a class="nav__link" href="/kalina-art-prototype/kontakty/">Контакты</a>
-            </nav>
 
   <nav class="mnav" id="mnav" aria-label="Меню" hidden>
     <a href="/kalina-art-prototype/v5/">Главная</a>
@@ -362,12 +362,13 @@ Telegram</a>
   <a class="card__img" href="" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="" alt="" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="" data-f="title"></a></h3>
+  <button class="card__room" type="button" data-room data-f="room" aria-label="Примерить в интерьере" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="" data-f="title"></a></h3>
   <a class="card__artist" href="" data-f="artist"></a>
   <p class="card__meta" data-f="size"></p>
   <p class="card__price" data-f="price"></p>
 </article>
 </template>
-<script src="/kalina-art-prototype/assets/site.js?v=b3c4b7db" defer></script>
+<script src="/kalina-art-prototype/assets/site.js?v=d362aedb" defer></script>
 <script src="/kalina-art-prototype/assets/v5.js?v=e3a31601" defer></script></body>
 </html>

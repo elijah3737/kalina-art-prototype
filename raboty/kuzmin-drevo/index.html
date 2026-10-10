@@ -20,15 +20,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;1,400&display=swap">
 <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/pt-root-ui">
 <link rel="stylesheet" href="/kalina-art-prototype/assets/tokens.css?v=710496ec">
-<link rel="stylesheet" href="/kalina-art-prototype/assets/site-v5.css?v=ac7e0a53">
+<link rel="stylesheet" href="/kalina-art-prototype/assets/site-v5.css?v=883e046b">
 </head>
-<body>
+<body data-room-js="/kalina-art-prototype/assets/room.js?v=4300d537">
 <a class="skip" href="#main">Перейти к содержимому</a>
 <header class="hdr" data-hdr>
   <div class="wrap hdr__top">
     <a class="logo" href="/kalina-art-prototype/v5/" aria-label="KALINA-ART — на главную">
       <img src="https://static.tildacdn.com/tild6530-6339-4133-a334-653538363737/KA_logo_R.svg" alt="KALINA-ART" width="230" height="34">
     </a>
+    <nav class="nav" aria-label="Главное меню">
+                      <a class="nav__link" href="/kalina-art-prototype/agentstvo/">Агентство</a>
+                              <a class="nav__link" href="/kalina-art-prototype/galereya/">Галерея</a>
+                              <div class="nav__dd">
+          <a class="nav__link" href="/kalina-art-prototype/uslugi/podbor-iskusstva/" aria-haspopup="true">Услуги</a>
+          <div class="nav__menu">
+                        <a href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства</a>
+                        <a href="/kalina-art-prototype/uslugi/primerka-kartin/">Примерка картин</a>
+                        <a href="/kalina-art-prototype/uslugi/kartina-na-zakaz/">Картина на заказ</a>
+                        <a href="/kalina-art-prototype/uslugi/podbor-v-podarok/">Подбор в подарок</a>
+                      </div>
+        </div>
+                              <a class="nav__link" href="/kalina-art-prototype/kontakty/">Контакты</a>
+                  </nav>
     <form class="hdr__search" role="search" action="/kalina-art-prototype/galereya/" data-search>
       <label class="visually-hidden" for="search-input">Поиск по художникам и работам</label>
       <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
@@ -51,20 +65,6 @@
     </div>
   </div>
 
-  <nav class="wrap nav" aria-label="Главное меню">
-                <a class="nav__link" href="/kalina-art-prototype/agentstvo/">Агентство</a>
-                      <a class="nav__link" href="/kalina-art-prototype/galereya/">Галерея</a>
-                      <div class="nav__dd">
-        <a class="nav__link" href="/kalina-art-prototype/uslugi/podbor-iskusstva/" aria-haspopup="true">Услуги</a>
-        <div class="nav__menu">
-                    <a href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства</a>
-                    <a href="/kalina-art-prototype/uslugi/primerka-kartin/">Примерка картин</a>
-                    <a href="/kalina-art-prototype/uslugi/kartina-na-zakaz/">Картина на заказ</a>
-                    <a href="/kalina-art-prototype/uslugi/podbor-v-podarok/">Подбор в подарок</a>
-                  </div>
-      </div>
-                      <a class="nav__link" href="/kalina-art-prototype/kontakty/">Контакты</a>
-            </nav>
 
   <nav class="mnav" id="mnav" aria-label="Меню" hidden>
     <a href="/kalina-art-prototype/v5/">Главная</a>
@@ -90,6 +90,33 @@
   <div class="work">
     <div class="work__media">
       <figure class="work__main"><img src="https://static.tildacdn.com/stor6139-3531-4032-a634-316635616238/f5c54b984ea9b7ab3e46922d0cc6cceb.jpg" alt="Кузьмин Р. А. — «Древо», 2015" fetchpriority="high" data-main></figure>
+                  <div class="inroom">
+        <div class="inroom__head"><p class="inroom__h">Эта работа в интерьере</p><button class="btn btn--ghost btn--small" type="button" data-room data-room-img="https://thb.tildacdn.com/stor6139-3531-4032-a634-316635616238/-/resize/1200x/f5c54b984ea9b7ab3e46922d0cc6cceb.jpg" data-room-w="70" data-room-h="90" data-room-t="Древо" data-room-a="Кузьмин Р. А." data-room-s="Лофт|Современная классика"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+Примерить в интерьере</button></div>
+        <div class="inroom__list">
+                    <button class="inroom__item" type="button" data-room data-room-img="https://thb.tildacdn.com/stor6139-3531-4032-a634-316635616238/-/resize/1200x/f5c54b984ea9b7ab3e46922d0cc6cceb.jpg" data-room-w="70" data-room-h="90" data-room-t="Древо" data-room-a="Кузьмин Р. А." data-room-s="Лофт|Современная классика" data-room-start="sovremennaya-klassika" aria-label="Посмотреть в интерьере: Современная классика">
+            <span class="inroom__scene" style="aspect-ratio:1536/1024">
+              <img src="/kalina-art-prototype/assets/interiors/sovremennaya-klassika-s.webp?v=1ea6d8ec" alt="" loading="lazy" decoding="async">
+              <img class="inroom__art" src="https://thb.tildacdn.com/stor6139-3531-4032-a634-316635616238/-/resize/300x/f5c54b984ea9b7ab3e46922d0cc6cceb.jpg" alt="" loading="lazy" decoding="async" style="left:44.372%;top:30.537%;width:11.257%;height:21.709%">
+            </span>
+            <span class="inroom__t">Современная классика</span>
+          </button>
+                    <button class="inroom__item" type="button" data-room data-room-img="https://thb.tildacdn.com/stor6139-3531-4032-a634-316635616238/-/resize/1200x/f5c54b984ea9b7ab3e46922d0cc6cceb.jpg" data-room-w="70" data-room-h="90" data-room-t="Древо" data-room-a="Кузьмин Р. А." data-room-s="Лофт|Современная классика" data-room-start="loft" aria-label="Посмотреть в интерьере: Лофт">
+            <span class="inroom__scene" style="aspect-ratio:1536/1024">
+              <img src="/kalina-art-prototype/assets/interiors/loft-s.webp?v=b3c539fa" alt="" loading="lazy" decoding="async">
+              <img class="inroom__art" src="https://thb.tildacdn.com/stor6139-3531-4032-a634-316635616238/-/resize/300x/f5c54b984ea9b7ab3e46922d0cc6cceb.jpg" alt="" loading="lazy" decoding="async" style="left:44.417%;top:34.229%;width:11.165%;height:21.533%">
+            </span>
+            <span class="inroom__t">Лофт</span>
+          </button>
+                    <button class="inroom__item" type="button" data-room data-room-img="https://thb.tildacdn.com/stor6139-3531-4032-a634-316635616238/-/resize/1200x/f5c54b984ea9b7ab3e46922d0cc6cceb.jpg" data-room-w="70" data-room-h="90" data-room-t="Древо" data-room-a="Кузьмин Р. А." data-room-s="Лофт|Современная классика" data-room-start="klassika" aria-label="Посмотреть в интерьере: Классика">
+            <span class="inroom__scene" style="aspect-ratio:1536/1024">
+              <img src="/kalina-art-prototype/assets/interiors/klassika-s.webp?v=d141cc85" alt="" loading="lazy" decoding="async">
+              <img class="inroom__art" src="https://thb.tildacdn.com/stor6139-3531-4032-a634-316635616238/-/resize/300x/f5c54b984ea9b7ab3e46922d0cc6cceb.jpg" alt="" loading="lazy" decoding="async" style="left:44.053%;top:28.916%;width:11.895%;height:22.939%">
+            </span>
+            <span class="inroom__t">Классика</span>
+          </button>
+                  </div>
+      </div>
           </div>
     <div class="work__info">
       <a class="work__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/">Кузьмин Р. А.</a>
@@ -118,7 +145,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-kuryaschaya-za-stolom/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor3730-3636-4839-a364-386330623062/-/resize/600x/e8e96dbc562f868330658ae320621837.jpg" alt="Кузьмин Р. А. — «Курящая за столом»" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-kuryaschaya-za-stolom/" data-f="title">Курящая за столом</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3730-3636-4839-a364-386330623062/-/resize/1200x/e8e96dbc562f868330658ae320621837.jpg" data-room-w="80" data-room-h="100" data-room-t="Курящая за столом" data-room-a="Кузьмин Р. А." data-room-s="Современная классика|Лофт" data-f="room" aria-label="Примерить в интерьере: Курящая за столом" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-kuryaschaya-za-stolom/" data-f="title">Курящая за столом</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
   <p class="card__meta" data-f="size">100 × 80 см</p>
   <p class="card__price" data-f="price">Цена по запросу</p>
@@ -127,7 +155,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-zvezda-polyn/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor3663-3135-4063-a233-646239613533/-/resize/600x/4329f13fc9bcfa66601932349874890e.jpg" alt="Кузьмин Р. А. — «Звезда Полынь», 2023" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-zvezda-polyn/" data-f="title">Звезда Полынь</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3663-3135-4063-a233-646239613533/-/resize/1200x/4329f13fc9bcfa66601932349874890e.jpg" data-room-w="100" data-room-h="120" data-room-t="Звезда Полынь" data-room-a="Кузьмин Р. А." data-room-s="Лофт|Современная классика" data-f="room" aria-label="Примерить в интерьере: Звезда Полынь" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-zvezda-polyn/" data-f="title">Звезда Полынь</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
   <p class="card__meta" data-f="size">120 × 100 см</p>
   <p class="card__price" data-f="price">500 000 ₽</p>
@@ -136,7 +165,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-kurilschitsa/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/tild6535-6632-4466-a236-306235656264/-/resize/600x/IMG_8149.jpeg" alt="Кузьмин Р. А. — «Курильщица»" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-kurilschitsa/" data-f="title">Курильщица</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/tild6535-6632-4466-a236-306235656264/-/resize/1200x/IMG_8149.jpeg" data-room-w="80" data-room-h="100" data-room-t="Курильщица" data-room-a="Кузьмин Р. А." data-room-s="Современная классика|Лофт" data-f="room" aria-label="Примерить в интерьере: Курильщица" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-kurilschitsa/" data-f="title">Курильщица</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
   <p class="card__meta" data-f="size">100 × 80 см</p>
   <p class="card__price" data-f="price">600 000 ₽</p>
@@ -145,7 +175,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/kuzmin-rybaki-v-batumi/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor3632-3361-4465-a364-656265303837/-/resize/600x/85cad0f1f9ce8341682a55829dbe8b6c.jpg" alt="Кузьмин Р. А. — «Рыбаки в Батуми», 2025" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-rybaki-v-batumi/" data-f="title">Рыбаки в Батуми</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3632-3361-4465-a364-656265303837/-/resize/1200x/85cad0f1f9ce8341682a55829dbe8b6c.jpg" data-room-w="50" data-room-h="70" data-room-t="Рыбаки в Батуми" data-room-a="Кузьмин Р. А." data-room-s="Лофт|Современная классика" data-f="room" aria-label="Примерить в интерьере: Рыбаки в Батуми" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/kuzmin-rybaki-v-batumi/" data-f="title">Рыбаки в Батуми</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/kuzmin/" data-f="artist">Кузьмин Р. А.</a>
   <p class="card__meta" data-f="size">70 × 50 см</p>
   <p class="card__price" data-f="price">110 000 ₽</p>
@@ -160,7 +191,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/belima-priyut-dlya-solntsa/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor3734-3262-4334-a166-383266393161/-/resize/600x/91215cb180b1f0f23567fcc2b4168aaa.jpg" alt="Белима Л. П. — «Приют для солнца», 2022" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/belima-priyut-dlya-solntsa/" data-f="title">Приют для солнца</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3734-3262-4334-a166-383266393161/-/resize/1200x/91215cb180b1f0f23567fcc2b4168aaa.jpg" data-room-w="100" data-room-h="120" data-room-t="Приют для солнца" data-room-a="Белима Л. П." data-room-s="Лофт|Современная классика" data-f="room" aria-label="Примерить в интерьере: Приют для солнца" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/belima-priyut-dlya-solntsa/" data-f="title">Приют для солнца</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/belima/" data-f="artist">Белима Л. П.</a>
   <p class="card__meta" data-f="size">120 × 100 см</p>
   <p class="card__price" data-f="price">600 000 ₽</p>
@@ -169,7 +201,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/molochnikov-nochnoe-puteshestvie/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor3464-6636-4662-b530-616264333863/-/resize/600x/5e6eaa15dbda57c17f3bb5906646422d.jpg" alt="Молочников М. В. — «Ночное путешествие», 2012" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/molochnikov-nochnoe-puteshestvie/" data-f="title">Ночное путешествие</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor3464-6636-4662-b530-616264333863/-/resize/1200x/5e6eaa15dbda57c17f3bb5906646422d.jpg" data-room-w="72" data-room-h="72" data-room-t="Ночное путешествие" data-room-a="Молочников М. В." data-room-s="Лофт|Современная классика" data-f="room" aria-label="Примерить в интерьере: Ночное путешествие" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/molochnikov-nochnoe-puteshestvie/" data-f="title">Ночное путешествие</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/molochnikov/" data-f="artist">Молочников М. В.</a>
   <p class="card__meta" data-f="size">72 × 72 см</p>
   <p class="card__price" data-f="price">300 000 ₽</p>
@@ -178,7 +211,8 @@
   <a class="card__img" href="/kalina-art-prototype/raboty/belima-diptih-sad/" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="https://thb.tildacdn.com/stor6661-6263-4963-b238-346436373832/-/resize/600x/bfc5779e22764ec4af3522e4474d9044.jpg" alt="Белима Л. П. — «Диптих. Сад»" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/belima-diptih-sad/" data-f="title">Диптих. Сад</a></h3>
+  <button class="card__room" type="button" data-room data-room-img="https://thb.tildacdn.com/stor6661-6263-4963-b238-346436373832/-/resize/1200x/bfc5779e22764ec4af3522e4474d9044.jpg" data-room-w="80" data-room-h="80" data-room-t="Диптих. Сад" data-room-a="Белима Л. П." data-room-s="Современная классика|Скандинавский" data-f="room" aria-label="Примерить в интерьере: Диптих. Сад" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="/kalina-art-prototype/raboty/belima-diptih-sad/" data-f="title">Диптих. Сад</a></h3>
   <a class="card__artist" href="/kalina-art-prototype/hudozhniki/belima/" data-f="artist">Белима Л. П.</a>
   <p class="card__meta" data-f="size">80 × 80 см</p>
   <p class="card__price" data-f="price">800 000 ₽</p>
@@ -252,12 +286,13 @@
   <a class="card__img" href="" data-f="link" tabindex="-1" aria-hidden="true">
     <img src="" alt="" loading="lazy" decoding="async" data-f="img">
   </a>
-  <h3 class="card__title"><a href="" data-f="title"></a></h3>
+  <button class="card__room" type="button" data-room data-f="room" aria-label="Примерить в интерьере" title="Примерить в интерьере"><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3.5" width="10" height="7.5"/><path d="M4 20.5v-3.8c0-.8.7-1.5 1.5-1.5h13c.8 0 1.5.7 1.5 1.5v3.8M4 18.5h16"/></svg>
+</button>  <h3 class="card__title"><a href="" data-f="title"></a></h3>
   <a class="card__artist" href="" data-f="artist"></a>
   <p class="card__meta" data-f="size"></p>
   <p class="card__price" data-f="price"></p>
 </article>
 </template>
-<script src="/kalina-art-prototype/assets/site.js?v=b3c4b7db" defer></script>
+<script src="/kalina-art-prototype/assets/site.js?v=d362aedb" defer></script>
 <script src="/kalina-art-prototype/assets/v5.js?v=e3a31601" defer></script></body>
 </html>
