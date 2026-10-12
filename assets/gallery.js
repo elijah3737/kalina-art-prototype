@@ -44,6 +44,11 @@
         if (!pa !== !pb) return pa ? -1 : 1;
         if (pa !== pb) return s === 'price-asc' ? pa - pb : pb - pa;
       }
+      if (s === 'new') {
+        // по году работы; год не указан — в конце
+        var ya = num(a, 'data-year'), yb = num(b, 'data-year');
+        if (ya !== yb) return yb - ya;
+      }
       if (s === 'size-asc' || s === 'size-desc') {
         var d = num(a, 'data-size') - num(b, 'data-size');
         if (d) return s === 'size-asc' ? d : -d;

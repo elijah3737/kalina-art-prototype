@@ -1,4 +1,4 @@
-// KALINA ART — поведение страниц: меню, поиск, лента выставок, «Показать ещё», фото работы, заявка, подписка, cookie.
+// KALINA ART — поведение страниц: меню, поиск, лента выставок, «Показать ещё», фото работы, заявка (api/lead.php), подписка, cookie.
 // Данные из JSON вставляются только через textContent и атрибуты — никакого innerHTML с данными.
 (function () {
   'use strict';
@@ -206,6 +206,7 @@
   var main = $('[data-main]');
   $$('[data-thumb]').forEach(function (b) {
     b.addEventListener('click', function () {
+      main.removeAttribute('srcset'); // иначе браузер продолжит показывать главное фото из srcset
       main.src = b.dataset.thumb;
       $$('[data-thumb]').forEach(function (x) { x.classList.toggle('is-current', x === b); });
     });
@@ -234,10 +235,7 @@
 
   // ---------- примерка в интерьере: assets/room.js грузим по первому клику ----------
   var roomJs = null;
-  document.addEventListener('click', function (e) {
-    var b = e.target.closest && e.target.closest('[data-room]');
-    if (!b || !b.dataset.roomImg) return;
-    e.preventDefault();
+  function withRoom(b, run) {
     if (!roomJs) roomJs = new Promise(function (ok, fail) {
       var sc = document.createElement('script');
       sc.src = document.body.dataset.roomJs;
@@ -246,7 +244,21 @@
       document.head.appendChild(sc);
     });
     b.setAttribute('aria-busy', 'true');
-    roomJs.then(function () { b.removeAttribute('aria-busy'); window.kaRoom.open(b); }, function () { b.removeAttribute('aria-busy'); });
+    roomJs.then(function () { b.removeAttribute('aria-busy'); run(); }, function () { b.removeAttribute('aria-busy'); });
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-room]');
+    if (!b || !b.dataset.roomImg) return;
+    e.preventDefault();
+    withRoom(b, function () { window.kaRoom.open(b); });
+  });
+  // «На своей стене»: фото выбрано на странице — открываем примерку сразу с ним
+  document.addEventListener('change', function (e) {
+    var input = e.target;
+    if (!input.matches || !input.matches('[data-room-own]') || !input.files[0]) return;
+    var b = input.closest('label'), file = input.files[0];
+    input.value = '';
+    withRoom(b, function () { window.kaRoom.open(b, file); });
   });
   if (dlg) {
     $('[data-lead-close]', dlg).addEventListener('click', closeLead);
@@ -280,6 +292,14 @@
     return bad;
   }
   var NAMES = { name: 'имя', phone: 'телефон', email: 'email', consent: 'согласие на обработку данных' };
+  // заявка уходит в api/lead.php; демо-копия прототипа на GitHub Pages без PHP — только благодарность
+  var DEMO = /\.github\.io$/.test(location.hostname);
+  var opened = Date.now();
+  function lock(form, on) { $$('input, textarea, button', form).forEach(function (el) { el.disabled = on; }); }
+  function fallback() {
+    var tel = $('a[href^="tel:"]');
+    return 'Не отправилось. Попробуйте ещё раз' + (tel ? ' или позвоните: ' + tel.textContent.trim() : '') + '.';
+  }
   $$('[data-lead-form]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -287,9 +307,22 @@
       if (form.elements.email.value.trim()) fields.push('email');
       var bad = validate(form, fields);
       if (bad.length) { msg(form, 'Проверьте: ' + bad.map(function (n) { return NAMES[n]; }).join(', ') + '.', true); return; }
-      // Прототип: отправку на почту подключим на этапе разработки (api/lead.php).
-      $$('input, textarea, button', form).forEach(function (el) { el.disabled = true; });
-      msg(form, 'Спасибо! Татьяна свяжется с вами по телефону или в мессенджере.');
+      var thanks = 'Спасибо! Татьяна свяжется с вами по телефону или в мессенджере.';
+      if (DEMO) { lock(form, true); msg(form, thanks); return; }
+      var data = new FormData(form);
+      data.append('page', location.pathname);
+      data.append('t', String(Date.now() - opened));
+      lock(form, true);
+      msg(form, 'Отправляем…');
+      fetch('/api/lead.php', { method: 'POST', body: data, credentials: 'same-origin', headers: { Accept: 'application/json' } })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (j) {
+          if (!j.ok) { lock(form, false); msg(form, j.error || fallback(), true); return; }
+          msg(form, thanks);
+          var ym = document.documentElement.getAttribute('data-ym');
+          if (ym && typeof window.ym === 'function') window.ym(Number(ym), 'reachGoal', 'lead');
+        })
+        .catch(function () { lock(form, false); msg(form, fallback(), true); });
     });
   });
   $$('[data-subscribe]').forEach(function (form) {
@@ -303,13 +336,15 @@
   });
 
   // ---------- cookie ----------
+  // выбор хранится в ka_cookie_ok: '1' — согласен (Метрика с картой кликов и Вебвизором со следующей страницы), '0' — только обезличенная статистика
   var cookie = $('#cookie');
   var seen = false;
-  try { seen = localStorage.getItem('ka_cookie_ok') === '1'; } catch (err) { /* приватный режим */ }
+  try { seen = localStorage.getItem('ka_cookie_ok') !== null; } catch (err) { /* приватный режим */ }
   if (cookie && !seen) cookie.hidden = false;
-  var ok = $('[data-cookie-ok]');
-  if (ok) ok.addEventListener('click', function () {
-    cookie.hidden = true;
-    try { localStorage.setItem('ka_cookie_ok', '1'); } catch (err) { /* не страшно */ }
+  $$('[data-cookie-ok]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      cookie.hidden = true;
+      try { localStorage.setItem('ka_cookie_ok', b.getAttribute('data-cookie-ok')); } catch (err) { /* не страшно */ }
+    });
   });
 })();

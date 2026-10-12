@@ -281,3 +281,5 @@ dialog.lead-dlg .h3 { padding-right: var(--space-2xl); font-size: var(--v2-h3); 
 
 /* примерка в интерьере — только в дизайне 5 */
 .card__room { display: none; }
+
+.hp { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

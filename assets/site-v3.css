@@ -82,3 +82,5 @@ body{font-size:16px}.concept-bar{padding:6px var(--gutter);display:flex;align-it
 
 /* примерка в интерьере — только в дизайне 5 */
 .card__room { display: none; }
+
+.hp { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

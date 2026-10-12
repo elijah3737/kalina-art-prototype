@@ -385,3 +385,5 @@ body.has-pickbar .cookie { bottom: calc(var(--pickbar-h, 4.25rem) + var(--space-
 
 /* примерка в интерьере — только в дизайне 5 */
 .card__room { display: none; }
+
+.hp { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
