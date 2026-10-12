@@ -246,6 +246,30 @@
     b.setAttribute('aria-busy', 'true');
     roomJs.then(function () { b.removeAttribute('aria-busy'); run(); }, function () { b.removeAttribute('aria-busy'); });
   }
+  // прогрев примерки: на странице работы — когда страница загрузилась и браузер свободен;
+  // в галерее — при первом наведении или касании значка интерьера
+  function warmRoom(b) {
+    if (!b || !b.dataset.roomImg || !document.body.dataset.roomJs) return;
+    if (!roomJs) roomJs = new Promise(function (ok, fail) {
+      var sc = document.createElement('script');
+      sc.src = document.body.dataset.roomJs;
+      sc.onload = ok;
+      sc.onerror = function () { roomJs = null; fail(); };
+      document.head.appendChild(sc);
+    });
+    roomJs.then(function () { if (window.kaRoom.warm) window.kaRoom.warm(b); }, function () {});
+  }
+  var inroomBtn = $('.inroom [data-room]');
+  if (inroomBtn) window.addEventListener('load', function () {
+    var go = function () { warmRoom(inroomBtn); };
+    if ('requestIdleCallback' in window) window.requestIdleCallback(go, { timeout: 2500 }); else setTimeout(go, 1200);
+  });
+  ['pointerover', 'touchstart'].forEach(function (ev) {
+    document.addEventListener(ev, function (e) {
+      var b = e.target.closest && e.target.closest('[data-room]');
+      if (b && !b.dataset.warm) { b.dataset.warm = '1'; warmRoom(b); }
+    }, { passive: true });
+  });
   document.addEventListener('click', function (e) {
     var b = e.target.closest && e.target.closest('[data-room]');
     if (!b || !b.dataset.roomImg) return;

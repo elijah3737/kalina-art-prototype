@@ -620,12 +620,30 @@
   function caption() { return '«' + art.t + '», ' + art.a + ' · ' + cm(art.w) + ' × ' + cm(art.h) + ' см'; }
   function msg(t) { el.msg.textContent = t; }
 
+  var roomsReq = null;
   function getRooms() {
     if (rooms) return Promise.resolve(rooms);
-    return fetch('/kalina-art-prototype/data/interiors.json', { credentials: 'same-origin' }).then(function (r) {
+    // один запрос на всех: прогрев страницы и клик не скачивают список дважды
+    roomsReq = roomsReq || fetch('/kalina-art-prototype/data/interiors.json', { credentials: 'same-origin' }).then(function (r) {
       if (!r.ok) throw new Error(r.status);
       return r.json();
-    }).then(function (d) { rooms = d; return d; });
+    }).then(function (d) { rooms = d; return d; }, function (e) { roomsReq = null; throw e; });
+    return roomsReq;
+  }
+
+  // прогрев: список комнат, фон первой комнаты и сама картина — заранее, пока человек смотрит страницу;
+  // тогда окно по клику открывается сразу, а не после трёх запросов подряд
+  var warmed = {};
+  function warm(btn) {
+    var d = btn.dataset;
+    return getRooms().then(function () {
+      var first = rooms.filter(function (r) { return r.id === d.roomStart; })[0] || rooms[0];
+      [first && first.img, d.roomImg].forEach(function (src) {
+        if (!src || warmed[src]) return;
+        warmed[src] = new Image();
+        warmed[src].src = src;
+      });
+    }).catch(function () { /* не страшно: загрузится по клику */ });
   }
 
   // открыть окно для картины из кнопки; file — сразу своё фото (кнопка «На своей стене» на странице работы)
@@ -650,6 +668,7 @@
 
   window.kaRoom = {
     open: open,
+    warm: warm,
     // для проверок: состояние сцены и отметки
     _state: function () { return { scene: scene, own: own, calib: calib, art: art, px: scene ? artPx() : null }; },
     _calib: function (pts) { calib.pts = pts; drawHandles(); syncDone(); }
