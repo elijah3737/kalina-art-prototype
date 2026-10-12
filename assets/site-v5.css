@@ -814,7 +814,7 @@ button.ct-ways__act { padding: 0; border: 0; background: none; color: inherit; f
   .hdr__top > .hdr__tools { grid-column: 4; }
 }
 /* на средних экранах поиск не помещается рядом с меню — лупа, по клику поле вместо меню */
-@media (min-width: 60rem) and (max-width: 74.99rem) {
+@media (min-width: 60rem) and (max-width: 84.99rem) {
   .hdr:not(.is-search) .hdr__search { display: none; }
   .hdr:not(.is-search) .hdr__search-toggle { display: inline-grid; }
   .hdr.is-search .hdr__search { grid-column: 2 / 4; width: 100%; }

@@ -153,6 +153,7 @@
 
   // ---------- сцена ----------
   function show(id) {
+    var prev = scene;
     if (id === 'own' && own) {
       scene = { id: 'own', title: 'Своя стена', src: own.img, W: own.W, H: own.H, own: true, shadow: own.shadow, k: own.k };
       setOwnH();
@@ -169,13 +170,36 @@
       };
     }
     el.strip.querySelectorAll('[data-id]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.id === scene.id)); });
-    el.stage.style.setProperty('--ar', scene.W / scene.H);
-    if (el.bg.getAttribute('src') !== scene.src) {
-      // пока грузится новый фон, картину не показываем — иначе она мелькнёт на старой комнате в новом месте
+    var next = scene, token = ++showToken;
+    if (el.bg.getAttribute('src') !== next.src && (next.own || !prev)) {
+      // своё фото (уже в памяти) и первое открытие: картину прячем, пока фон не загрузится
       el.stage.classList.add('is-loading');
       el.bg.onload = el.bg.onerror = function () { el.stage.classList.remove('is-loading'); light(); };
-      el.bg.src = scene.src;
+      el.bg.src = next.src;
+    } else if (el.bg.getAttribute('src') !== next.src) {
+      // новый фон сначала грузим и декодируем в памяти, а меняем комнату, пропорции и место картины одним кадром:
+      // иначе картина прыгала на новое место поверх старой комнаты, а фон догонял её позже
+      scene = prev || scene;
+      var pre = new Image(), done = false;
+      var swap = function () {
+        if (done || token !== showToken) return; // уже сменили или пока грузилось, выбрали другую комнату
+        done = true;
+        scene = next;
+        el.bg.src = next.src;
+        applyScene();
+        light();
+      };
+      // загрузилось → ещё ждём декодирования, но не дольше 150 мс (decode() в скрытой вкладке может не завершиться)
+      pre.onload = function () { if (pre.decode) pre.decode().then(swap, swap); setTimeout(swap, 150); };
+      pre.onerror = swap;
+      pre.src = next.src;
+      return;
     }
+    applyScene();
+  }
+  var showToken = 0;
+  function applyScene() {
+    el.stage.style.setProperty('--ar', scene.W / scene.H);
     el.sizewrap.hidden = !(scene.own && own.approx);
     el.size.value = scene.k;
     endCalib(true);
