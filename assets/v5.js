@@ -20,7 +20,7 @@
   nums.filter(function (el) { return el.getBoundingClientRect().top > window.innerHeight; }).forEach(function (el) { io.observe(el); });
 })();
 
-// Вкладки на странице работы: стрелки ←/→ переключают, без JS тексты видны все сразу
+// Вкладки на странице работы: стрелки переключают, без JS тексты видны все сразу
 (function () {
   'use strict';
   Array.prototype.forEach.call(document.querySelectorAll('[data-wtabs]'), function (box) {
@@ -38,11 +38,31 @@
     }
     list.hidden = false;
     box.classList.add('is-js');
+    // высота блока — по самому длинному тексту, чтобы страница не прыгала при переключении
+    var body = box.querySelector('.wtabs__body');
+    function fit() {
+      if (!body) return;
+      body.style.minHeight = '';
+      var max = 0;
+      var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
+      var shown = panels.map(function (p) { return p.hidden; });
+      // меряем весь блок с каждой панелью по очереди — так учитываются и отступы панели
+      panels.forEach(function (p) {
+        panels.forEach(function (q) { q.hidden = q !== p; });
+        max = Math.max(max, body.offsetHeight);
+      });
+      panels.forEach(function (p, i) { p.hidden = shown[i]; });
+      body.style.minHeight = max + 'px';
+    }
     select(tabs[0], false);
+    fit();
+    window.addEventListener('resize', fit);
+    window.addEventListener('load', fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
     tabs.forEach(function (t, i) {
       t.addEventListener('click', function () { select(t, false); });
       t.addEventListener('keydown', function (ev) {
-        var d = ev.key === 'ArrowRight' ? 1 : ev.key === 'ArrowLeft' ? -1 : 0;
+        var d = (ev.key === 'ArrowRight' || ev.key === 'ArrowDown') ? 1 : (ev.key === 'ArrowLeft' || ev.key === 'ArrowUp') ? -1 : 0;
         if (!d) return;
         ev.preventDefault();
         select(tabs[(i + d + tabs.length) % tabs.length], true);

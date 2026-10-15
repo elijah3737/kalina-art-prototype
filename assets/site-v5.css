@@ -978,13 +978,20 @@ dialog.room.is-calib .room__panel { padding-bottom: var(--space-md); }
   .cookie__btns .btn { flex: 1 1 auto; padding-inline: var(--space-sm); }
 }
 
-/* Страница работы: вкладки «О картине · Об авторе · Где смотрится» секцией перед работами автора. Без JS — все тексты подряд с заголовками */
-.wtabs { margin: 0; }
-.wtabs__panel { padding-top: var(--space-md); }
-.wtabs__list { display: flex; gap: var(--space-lg); border-bottom: var(--rule); overflow-x: auto; scrollbar-width: none; }
-.wtabs__list::-webkit-scrollbar { display: none; }
-.wtabs__tab { min-height: 2.75rem; padding: 0; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: none; font: inherit; font-size: var(--text-md); font-weight: 500; color: var(--color-muted); white-space: nowrap; cursor: pointer; transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out); }
-.wtabs__tab:hover { color: var(--color-ink); }
-.wtabs__tab[aria-selected="true"] { color: var(--color-ink); border-bottom-color: var(--color-ink); }
-.wtabs__panel p { margin-block: var(--space-sm) 0; }
+/* Страница работы: секция «О работе» перед работами автора — переключатели в ряд (как рубрики журнала: рамка, выбранный залит),
+   под ними текст во всю ширину. Без JS — все тексты подряд с заголовками */
+.wabout { margin-top: var(--space-2xl); padding-bottom: var(--space-2xl); }
+.wabout + .sec5--in { margin-top: 0; }
+.wtabs__list { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.wtabs__tab { min-height: 3rem; padding: 0 var(--space-lg); border: var(--rule); background: none; font: inherit; font-weight: 500; color: var(--color-ink); white-space: nowrap; cursor: pointer; transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out); }
+.wtabs__tab:hover { border-color: var(--color-ink); }
+.wtabs__tab[aria-selected="true"] { border-color: var(--color-ink); background: var(--color-ink); color: var(--color-paper); }
+.wtabs__body { padding-top: 25px; }
+.wtabs .wtabs__panel { max-width: none; margin-top: 0; font-size: var(--text-md); line-height: 1.65; color: var(--color-ink-2); }
+.wtabs__panel p + p { margin-top: var(--space-md); }
+.wtabs__panel .link-arrow { margin-top: var(--space-lg); }
+.wtabs:not(.is-js) .wtabs__panel + .wtabs__panel { margin-top: var(--space-xl); }
 .wtabs.is-js .wtabs__h { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* узкий телефон: три равные кнопки в один ряд, длинная подпись переносится внутри кнопки */
+@media (max-width: 29.99rem) { .wtabs__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); } .wtabs__tab { padding: var(--space-2xs) var(--space-xs); font-size: var(--text-sm); line-height: 1.2; white-space: normal; text-align: center; } }
+@media (min-width: 60rem) { .wabout { margin-top: var(--space-3xl); padding-bottom: var(--space-3xl); } .wtabs__tab { padding: 0 var(--space-xl); } }
