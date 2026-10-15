@@ -978,14 +978,13 @@ dialog.room.is-calib .room__panel { padding-bottom: var(--space-md); }
   .cookie__btns .btn { flex: 1 1 auto; padding-inline: var(--space-sm); }
 }
 
-/* Страница работы: вкладки «О картине · Об авторе · Где смотрится» под ценой. Без JS — все тексты подряд с заголовками */
-.wtabs { margin-top: var(--space-xl); }
+/* Страница работы: вкладки «О картине · Об авторе · Где смотрится» секцией перед работами автора. Без JS — все тексты подряд с заголовками */
+.wtabs { margin: 0; }
+.wtabs__panel { padding-top: var(--space-md); }
 .wtabs__list { display: flex; gap: var(--space-lg); border-bottom: var(--rule); overflow-x: auto; scrollbar-width: none; }
 .wtabs__list::-webkit-scrollbar { display: none; }
-.wtabs__tab { min-height: 2.75rem; padding: 0; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: none; font: inherit; font-weight: 500; color: var(--color-muted); white-space: nowrap; cursor: pointer; transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out); }
+.wtabs__tab { min-height: 2.75rem; padding: 0; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: none; font: inherit; font-size: var(--text-md); font-weight: 500; color: var(--color-muted); white-space: nowrap; cursor: pointer; transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out); }
 .wtabs__tab:hover { color: var(--color-ink); }
 .wtabs__tab[aria-selected="true"] { color: var(--color-ink); border-bottom-color: var(--color-ink); }
 .wtabs__panel p { margin-block: var(--space-sm) 0; }
 .wtabs.is-js .wtabs__h { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.wtabs.is-js .wtabs__panel { padding-top: var(--space-xs); }
-.wtabs__stub { color: var(--color-muted); font-style: italic; }
