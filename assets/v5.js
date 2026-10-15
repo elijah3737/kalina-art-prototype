@@ -19,3 +19,34 @@
   // только ниже первого экрана: видимые сразу цифры не «прыгают» в ноль
   nums.filter(function (el) { return el.getBoundingClientRect().top > window.innerHeight; }).forEach(function (el) { io.observe(el); });
 })();
+
+// Вкладки на странице работы: стрелки ←/→ переключают, без JS тексты видны все сразу
+(function () {
+  'use strict';
+  Array.prototype.forEach.call(document.querySelectorAll('[data-wtabs]'), function (box) {
+    var list = box.querySelector('[role="tablist"]');
+    var tabs = Array.prototype.slice.call(box.querySelectorAll('[role="tab"]'));
+    if (!list || tabs.length < 2) return;
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        if (on) t.removeAttribute('tabindex'); else t.setAttribute('tabindex', '-1');
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+    }
+    list.hidden = false;
+    box.classList.add('is-js');
+    select(tabs[0], false);
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t, false); });
+      t.addEventListener('keydown', function (ev) {
+        var d = ev.key === 'ArrowRight' ? 1 : ev.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return;
+        ev.preventDefault();
+        select(tabs[(i + d + tabs.length) % tabs.length], true);
+      });
+    });
+  });
+})();

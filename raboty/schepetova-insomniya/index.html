@@ -15,7 +15,7 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="/kalina-art-prototype/assets/fonts/fonts.css?v=8f7f2067">
 <link rel="stylesheet" href="/kalina-art-prototype/assets/tokens.css?v=710496ec">
-<link rel="stylesheet" href="/kalina-art-prototype/assets/site-v5.css?v=def57f00">
+<link rel="stylesheet" href="/kalina-art-prototype/assets/site-v5.css?v=6f0a9a59">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VisualArtwork","name":"Инсомния","url":"https://kalina.art/raboty/schepetova-insomniya/","creator":{"@type":"Person","name":"Щепетова Е. А.","url":"https://kalina.art/hudozhniki/schepetova/"},"artform":"Живопись","image":"https://kalina.art/media/w/schepetova-insomniya/46e32965458d-1600.webp","dateCreated":"2021","height":{"@type":"QuantitativeValue","value":75,"unitCode":"CMT"},"width":{"@type":"QuantitativeValue","value":75,"unitCode":"CMT"},"offers":{"@type":"Offer","price":300000,"priceCurrency":"RUB","url":"https://kalina.art/raboty/schepetova-insomniya/","availability":"https://schema.org/InStock"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://kalina.art/"},{"@type":"ListItem","position":2,"name":"Галерея","item":"https://kalina.art/galereya/"},{"@type":"ListItem","position":3,"name":"Щепетова Е. А.","item":"https://kalina.art/hudozhniki/schepetova/"},{"@type":"ListItem","position":4,"name":"Инсомния","item":"https://kalina.art/raboty/schepetova-insomniya/"}]}</script>
 </head>
@@ -27,7 +27,7 @@
       <img src="/kalina-art-prototype/assets/logo.svg" alt="KALINA-ART" width="230" height="34">
     </a>
     <nav class="nav" aria-label="Главное меню">
-                      <a class="nav__link" href="/kalina-art-prototype/agentstvo/">Агентство</a>
+                      <a class="nav__link" href="/kalina-art-prototype/agentstvo/">О нас</a>
                               <a class="nav__link" href="/kalina-art-prototype/galereya/">Галерея</a>
                               <div class="nav__dd">
           <a class="nav__link" href="/kalina-art-prototype/uslugi/podbor-iskusstva/" aria-haspopup="true">Услуги</a>
@@ -66,7 +66,7 @@
 
   <nav class="mnav" id="mnav" aria-label="Меню" hidden>
     <a href="/kalina-art-prototype/v5/">Главная</a>
-    <a href="/kalina-art-prototype/agentstvo/">Агентство</a>
+    <a href="/kalina-art-prototype/agentstvo/">О нас</a>
     <a href="/kalina-art-prototype/galereya/">Галерея</a>
     <p class="mnav__group">Услуги</p>
         <a class="mnav__sub" href="/kalina-art-prototype/uslugi/podbor-iskusstva/">Подбор искусства</a>
@@ -134,7 +134,21 @@
       <p class="work__price">300 000 ₽</p>
       <button class="btn btn--wide" type="button" data-lead="«Инсомния», Щепетова Е. А." data-lead-title="Узнать о работе">Узнать о работе</button>
       <p class="work__alt">Или напишите: <a href="https://wa.me/79646264521?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%C2%AB%D0%98%D0%BD%D1%81%D0%BE%D0%BC%D0%BD%D0%B8%D1%8F%C2%BB%2C%20%D0%A9%D0%B5%D0%BF%D0%B5%D1%82%D0%BE%D0%B2%D0%B0%20%D0%95.%C2%A0%D0%90.." target="_blank" rel="noopener">WhatsApp</a> · <a href="https://t.me/Kalinaart_official" target="_blank" rel="noopener">Telegram</a></p>
-      <div class="buy5">
+            <div class="wtabs" data-wtabs>
+        <div class="wtabs__list" role="tablist" aria-label="О работе" hidden>
+                    <button class="wtabs__tab" type="button" role="tab" id="wt-about" aria-controls="wp-about" aria-selected="true">О картине</button>
+                    <button class="wtabs__tab" type="button" role="tab" id="wt-artist" aria-controls="wp-artist" aria-selected="false" tabindex="-1">Об авторе</button>
+                    <button class="wtabs__tab" type="button" role="tab" id="wt-fits" aria-controls="wp-fits" aria-selected="false" tabindex="-1">Где смотрится</button>
+                  </div>
+                <div class="wtabs__panel" role="tabpanel" id="wp-about" aria-labelledby="wt-about">
+          <h2 class="h3 wtabs__h">О картине</h2><p class="wtabs__stub">Здесь будет текст о картине: сюжет, настроение, цветовая композиция и техника.</p>        </div>
+                <div class="wtabs__panel" role="tabpanel" id="wp-artist" aria-labelledby="wt-artist">
+          <h2 class="h3 wtabs__h">Об авторе</h2><p class="wtabs__stub">Здесь будет биография художника — одна на автора, видна у всех его работ.</p><p><a class="link-arrow" href="/kalina-art-prototype/hudozhniki/schepetova/">Все работы автора · 6 <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17m-5-5 5 5-5 5"/></svg>
+</a></p>        </div>
+                <div class="wtabs__panel" role="tabpanel" id="wp-fits" aria-labelledby="wt-fits">
+          <h2 class="h3 wtabs__h">Где смотрится</h2><p class="wtabs__stub">Здесь будет совет, в какой комнате и при каком свете работа раскроется лучше.</p>        </div>
+              </div>
+            <div class="buy5">
         <p class="buy5__h">Помощь с выбором</p>
                 <a class="buy5__row" href="/kalina-art-prototype/uslugi/podbor-iskusstva/"><span class="buy5__t">Подбор искусства</span><span class="buy5__d">Цена по запросу</span><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17m-5-5 5 5-5 5"/></svg>
 </a>
@@ -143,7 +157,7 @@
                 <a class="buy5__row" href="/kalina-art-prototype/uslugi/podbor-v-podarok/"><span class="buy5__t">Подбор в подарок</span><span class="buy5__d">Цена по запросу</span><svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17m-5-5 5 5-5 5"/></svg>
 </a>
               </div>
-                      </div>
+    </div>
   </div>
         <section class="sec5 sec5--in" aria-labelledby="more-title">
     <div class="sec-head"><h2 class="sec-title" id="more-title">Ещё работы автора</h2><a class="link-arrow" href="/kalina-art-prototype/hudozhniki/schepetova/">Все работы · 6 <svg class="ic" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17m-5-5 5 5-5 5"/></svg>
@@ -211,7 +225,7 @@
     <nav class="ftr__col" aria-label="Галерея">
       <p class="ftr__h">Галерея</p>
       <a href="/kalina-art-prototype/galereya/">Все работы</a>
-      <a href="/kalina-art-prototype/agentstvo/">Агентство</a>
+      <a href="/kalina-art-prototype/agentstvo/">О нас</a>
       <a href="/kalina-art-prototype/kontakty/">Контакты</a>
     </nav>
     <nav class="ftr__col" aria-label="Услуги">
@@ -269,5 +283,5 @@
 </article>
 </template>
 <script src="/kalina-art-prototype/assets/site.js?v=351adad9" defer></script>
-<script src="/kalina-art-prototype/assets/v5.js?v=e3a31601" defer></script></body>
+<script src="/kalina-art-prototype/assets/v5.js?v=d969eb89" defer></script></body>
 </html>

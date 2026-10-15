@@ -83,7 +83,7 @@ h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
 .search__results a:hover, .search__results a:focus-visible { text-decoration: underline; }
 
 .nav { display: none; }
-.nav__link { display: inline-block; padding-block: var(--space-2xs); border-bottom: 1px solid transparent; font-size: var(--text-md); text-decoration: none; white-space: nowrap; transition: border-color var(--dur-fast) var(--ease-out); }
+.nav__link { display: inline-block; padding-block: var(--space-2xs); border-bottom: 1px solid transparent; font-size: var(--text-md); text-decoration: none; white-space: nowrap; min-width: 2.75rem; text-align: center; transition: border-color var(--dur-fast) var(--ease-out); }
 .nav__link:hover, .nav__link.is-current { border-color: var(--color-brand); }
 .nav__dd { position: relative; padding-bottom: var(--space-md); margin-bottom: calc(-1 * var(--space-md)); }
 .nav__menu { display: none; position: absolute; top: 100%; left: calc(-1 * var(--space-md)); z-index: 5; min-width: 15rem; padding-block: var(--space-xs); background: var(--color-paper); border: var(--rule); box-shadow: var(--shadow-pop); }
@@ -295,7 +295,7 @@ dialog.lead-dlg .h3 { padding-right: var(--space-2xl); font-size: var(--text-xl)
 .sub__btn:hover { background: var(--color-ink-2); }
 .sub__btn:disabled { opacity: 0.5; }
 .ftr__h { margin-bottom: var(--space-xs); font-size: var(--text-base); color: var(--color-ink); }
-.ftr__col a { display: block; width: fit-content; padding-block: 0.625rem; font-size: var(--text-sm); color: var(--color-ink-2); text-decoration: none; white-space: nowrap; }
+.ftr__col a { display: block; width: fit-content; min-width: 2.75rem; padding-block: 0.625rem; font-size: var(--text-sm); color: var(--color-ink-2); text-decoration: none; white-space: nowrap; }
 .ftr__col a:hover { text-decoration: underline; }
 @media (min-width: 60rem) { .ftr__col a { padding-block: var(--space-2xs); } }
 .ftr__bar { background: var(--color-ink); color: var(--color-on-dark-muted); font-size: var(--text-xs); }
@@ -977,3 +977,15 @@ dialog.room.is-calib .room__panel { padding-bottom: var(--space-md); }
   .cookie__btns { flex-direction: row; flex-wrap: wrap; gap: var(--space-xs); }
   .cookie__btns .btn { flex: 1 1 auto; padding-inline: var(--space-sm); }
 }
+
+/* Страница работы: вкладки «О картине · Об авторе · Где смотрится» под ценой. Без JS — все тексты подряд с заголовками */
+.wtabs { margin-top: var(--space-xl); }
+.wtabs__list { display: flex; gap: var(--space-lg); border-bottom: var(--rule); overflow-x: auto; scrollbar-width: none; }
+.wtabs__list::-webkit-scrollbar { display: none; }
+.wtabs__tab { min-height: 2.75rem; padding: 0; margin-bottom: -1px; border: 0; border-bottom: 2px solid transparent; background: none; font: inherit; font-weight: 500; color: var(--color-muted); white-space: nowrap; cursor: pointer; transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out); }
+.wtabs__tab:hover { color: var(--color-ink); }
+.wtabs__tab[aria-selected="true"] { color: var(--color-ink); border-bottom-color: var(--color-ink); }
+.wtabs__panel p { margin-block: var(--space-sm) 0; }
+.wtabs.is-js .wtabs__h { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.wtabs.is-js .wtabs__panel { padding-top: var(--space-xs); }
+.wtabs__stub { color: var(--color-muted); font-style: italic; }
