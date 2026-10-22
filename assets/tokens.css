@@ -29,7 +29,7 @@
   --color-error: oklch(50% 0.19 27);
 
   /* шрифты */
-  --font-sans: "PT Root UI", "PT Root", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "DIN Pro", "DINPro", "PT Root UI", "PT Root", "Helvetica Neue", Arial, sans-serif;
   --font-serif: "Spectral", Georgia, "Times New Roman", serif;
 
   /* размеры текста */

@@ -617,7 +617,7 @@
     }).catch(function () { msg('Не получилось собрать картинку. Попробуйте ещё раз.'); });
   }
 
-  function caption() { return '«' + art.t + '», ' + art.a + ' · ' + cm(art.w) + ' × ' + cm(art.h) + ' см'; }
+  function caption() { return '«' + art.t + '», ' + art.a.replace(/ (?=\p{Lu}\.)/gu, '\u00a0') + ', ' + cm(art.h) + '\u00a0×\u00a0' + cm(art.w) + '\u00a0см'; } // высота × ширина, как на странице работы
   function msg(t) { el.msg.textContent = t; }
 
   var roomsReq = null;
