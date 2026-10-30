@@ -1006,3 +1006,20 @@ dialog.room.is-calib .room__panel { padding-bottom: var(--space-md); }
 /* узкий телефон: три равные кнопки в один ряд, длинная подпись переносится внутри кнопки */
 @media (max-width: 29.99rem) { .wtabs__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); } .wtabs__tab { padding: var(--space-2xs) var(--space-xs); font-size: var(--text-sm); line-height: 1.2; white-space: normal; text-align: center; } }
 @media (min-width: 60rem) { .wabout { margin-top: var(--space-3xl); padding-bottom: var(--space-3xl); } .wtabs__tab { padding: 0 var(--space-xl); } }
+
+/* События на главной (созвон 30.10): посты из Telegram — фото, дата, первая строка заголовком, длинный текст под «Читать полностью» */
+.ev5 { display: grid; gap: var(--space-2xl) var(--space-lg); }
+.ev5__item { display: flex; flex-direction: column; min-width: 0; }
+.ev5__media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--color-surface); margin-bottom: var(--space-sm); }
+.ev5__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ev5__date { font-size: var(--text-xs); color: var(--color-muted); }
+.ev5__title { margin-top: var(--space-2xs); font-size: var(--text-md); line-height: 1.3; font-weight: 500; overflow-wrap: anywhere; }
+.ev5__text { color: var(--color-ink-2); font-size: var(--text-sm); line-height: 1.6; overflow-wrap: anywhere; }
+.ev5__text p { margin-top: var(--space-xs); }
+.ev5__more summary { margin-top: var(--space-xs); font-size: var(--text-sm); text-decoration: underline; cursor: pointer; list-style: none; }
+.ev5__more summary::-webkit-details-marker { display: none; }
+.ev5__more[open] summary { display: none; }
+.ev5__item .link-under { margin-top: var(--space-xs); }
+@media (min-width: 40rem) { .ev5 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 64rem) { .ev5 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.ev5__date:first-child { padding-top: var(--space-sm); border-top: var(--rule); } /* событие без фото — линия сверху, чтобы карточка не висела в пустоте */
