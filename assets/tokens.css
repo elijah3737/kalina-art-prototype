@@ -30,7 +30,9 @@
 
   /* шрифты */
   --font-sans: "PT Root UI", "PT Root", "Helvetica Neue", Arial, sans-serif;
-  --font-serif: "Spectral", Georgia, "Times New Roman", serif;
+  /* акцентный шрифт = основной: Татьяна, 30.10 — «у меня всё без засечек», Spectral убран со всего сайта.
+     Токен оставлен, чтобы акценты (курсив, цифры, цитаты) можно было снова развести одной строкой */
+  --font-serif: var(--font-sans);
 
   /* размеры текста */
   --text-xs: 0.8125rem;   /* 13 */

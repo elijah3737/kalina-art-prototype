@@ -161,12 +161,16 @@
     } else {
       var r = rooms.filter(function (x) { return x.id === id; })[0] || rooms[0];
       var p = r.px_per_cm;
+      // низ картины на старте — на 20 см выше линии развески (если на стене есть место): иначе она стояла
+      // на нижней границе и опустить её было нельзя, только поднять
+      var bottom = Math.max(r.hang[1], r.wall[1] + art.h * p) / p;
+      var lift = Math.max(0, Math.min(20, (bottom - r.wall[1] / p - art.h) / 2));
       scene = {
         id: r.id, title: r.title, src: r.img, W: r.size[0], H: r.size[1], own: false, shadow: r.shadow, k: 1,
         Hm: scaleH(p), Hi: scaleH(1 / p),
         // границы в см: где можно двигать картину; низ — не ниже линии развески (над мебелью)
         box: [r.wall[0] / p, r.wall[1] / p, r.wall[2] / p, Math.min(r.wall[3], r.hang[1]) / p],
-        c: [r.hang[0] / p, Math.max(r.hang[1], r.wall[1] + art.h * p) / p - art.h / 2]
+        c: [r.hang[0] / p, bottom - art.h / 2 - lift]
       };
     }
     el.strip.querySelectorAll('[data-id]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.id === scene.id)); });

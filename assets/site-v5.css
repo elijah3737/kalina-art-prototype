@@ -1,7 +1,7 @@
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 */
 /* Hallmark · macrostructure: Gallery Index (studied) · hero: фото во всю ширину, рамка поверх (сторона — под фото) · nav: логотип + поиск / ряд разделов · footer: бренд + подписка, 3 колонки, тёмная полоса
  * theme: studied-DNA (source: saatchiart.com) · paper oklch(100% 0 0) — белый бренда · accent oklch(54.1% 0.213 27.9) — красный логотипа, ≤5 % площади
- * display: PT Root UI капсом (шрифт бренда) + Spectral (акцент вместо PP Writer референса — у того нет кириллицы) · body: PT Root UI · label: Spectral italic
+ * display: PT Root UI капсом (шрифт бренда) · body: PT Root UI · label: PT Root UI italic (Spectral убран 30.10 по просьбе Татьяны — без засечек)
  * tone: галерея, сдержанно · цвета и шрифты — только токены из tokens.css
  */
 
@@ -504,6 +504,8 @@ html { scroll-padding-top: calc(var(--hdr-full, 8rem) + 1rem); }
 .flt__reset { min-height: 2.25rem; padding: 0 var(--space-xs); border: 0; background: none; font: inherit; font-size: var(--text-sm); text-decoration: underline; cursor: pointer; }
 .gal__grid { margin-top: var(--space-xl); }
 .gal__empty { margin-top: var(--space-xl); }
+.gal__cols { margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--color-ink-2); line-height: 1.8; }
+.gal__cols-h { color: var(--color-ink); font-weight: 500; }
 .gal__empty .link { padding: 0; border: 0; background: none; font: inherit; font-weight: 500; text-decoration: underline; cursor: pointer; }
 html.flt-lock { overflow: hidden; }
 @media (min-width: 60rem) {
@@ -604,6 +606,9 @@ html.flt-lock { overflow: hidden; }
 .sf-band__thumbs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2xs); margin-bottom: var(--space-md); }
 .sf-band__thumbs span { position: relative; display: block; aspect-ratio: 1; background: var(--color-surface); }
 .sf-band__thumbs img { position: absolute; inset: 12%; width: 76%; height: 76%; object-fit: contain; }
+/* страница «Художники»: фото художника — на всю клетку, работы — в паспарту */
+.arts .sf-band__thumbs .arts__photo img { inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.artist__photo { width: 9rem; aspect-ratio: 1; object-fit: cover; margin-bottom: var(--space-md); background: var(--color-surface); }
 .sf-band__price { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.5rem, 0.8vw + 1.2rem, 2rem); line-height: 1.15; font-variant-numeric: tabular-nums; }
 .sf-band__text { margin-top: var(--space-xs); color: var(--color-ink-2); }
 .sf-band .link-arrow { margin-top: auto; padding-top: var(--space-sm); align-self: flex-start; }
