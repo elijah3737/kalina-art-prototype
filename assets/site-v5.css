@@ -388,7 +388,7 @@ html { scroll-padding-top: calc(var(--hdr-full, 8rem) + 1rem); }
 .why5__list { display: grid; grid-template-columns: minmax(0, 1fr); margin-top: var(--space-2xl); padding: 0; list-style: none; text-align: center; }
 .why5__item { padding: var(--space-xl) var(--space-md); border-top: var(--rule); }
 .why5__item:first-child { border-top: 0; }
-.why5__value { display: block; font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.875rem, 1vw + 1.4rem, 2.375rem); line-height: 1.1; white-space: nowrap; color: var(--color-ink); font-variant-numeric: tabular-nums; }
+.why5__value { display: block; font-family: var(--font-sans); font-weight: 500; font-size: clamp(1.875rem, 1vw + 1.4rem, 2.375rem); line-height: 1.1; white-space: nowrap; color: var(--color-ink); font-variant-numeric: tabular-nums; }
 .why5__text { display: block; max-width: 17em; margin: var(--space-sm) auto 0; color: var(--color-ink-2); }
 @media (min-width: 40rem) {
   .why5__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
